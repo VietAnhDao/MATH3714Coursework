@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.10)  26 NOV 2018 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.10)  9 DEC 2018 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -85,6 +85,64 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
 )
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen107
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen108
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip10
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks17
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks18
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
 
@@ -112,7 +170,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count96
+\etb@tempcnta=\count108
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -129,7 +187,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count97
+\lrq@indent=\count109
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -138,68 +196,68 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count98
-\decimalpart=\count99
+\integerpart=\count110
+\decimalpart=\count111
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count100
-\c@listtotal=\count101
-\c@listcount=\count102
-\c@liststart=\count103
-\c@liststop=\count104
-\c@citecount=\count105
-\c@citetotal=\count106
-\c@multicitecount=\count107
-\c@multicitetotal=\count108
-\c@instcount=\count109
-\c@maxnames=\count110
-\c@minnames=\count111
-\c@maxitems=\count112
-\c@minitems=\count113
-\c@citecounter=\count114
-\c@savedcitecounter=\count115
-\c@uniquelist=\count116
-\c@uniquename=\count117
-\c@refsection=\count118
-\c@refsegment=\count119
-\c@maxextratitle=\count120
-\c@maxextratitleyear=\count121
-\c@maxextradate=\count122
-\c@maxextraalpha=\count123
-\c@abbrvpenalty=\count124
-\c@highnamepenalty=\count125
-\c@lownamepenalty=\count126
-\c@maxparens=\count127
-\c@parenlevel=\count128
-\blx@tempcnta=\count129
-\blx@tempcntb=\count130
-\blx@tempcntc=\count131
-\blx@maxsection=\count132
-\blx@maxsegment@0=\count133
-\blx@notetype=\count134
-\blx@parenlevel@text=\count135
-\blx@parenlevel@foot=\count136
-\blx@sectionciteorder@0=\count137
-\labelnumberwidth=\skip43
-\labelalphawidth=\skip44
-\biblabelsep=\skip45
-\bibitemsep=\skip46
-\bibnamesep=\skip47
-\bibinitsep=\skip48
-\bibparsep=\skip49
-\bibhang=\skip50
+\c@tabx@nest=\count112
+\c@listtotal=\count113
+\c@listcount=\count114
+\c@liststart=\count115
+\c@liststop=\count116
+\c@citecount=\count117
+\c@citetotal=\count118
+\c@multicitecount=\count119
+\c@multicitetotal=\count120
+\c@instcount=\count121
+\c@maxnames=\count122
+\c@minnames=\count123
+\c@maxitems=\count124
+\c@minitems=\count125
+\c@citecounter=\count126
+\c@savedcitecounter=\count127
+\c@uniquelist=\count128
+\c@uniquename=\count129
+\c@refsection=\count130
+\c@refsegment=\count131
+\c@maxextratitle=\count132
+\c@maxextratitleyear=\count133
+\c@maxextradate=\count134
+\c@maxextraalpha=\count135
+\c@abbrvpenalty=\count136
+\c@highnamepenalty=\count137
+\c@lownamepenalty=\count138
+\c@maxparens=\count139
+\c@parenlevel=\count140
+\blx@tempcnta=\count141
+\blx@tempcntb=\count142
+\blx@tempcntc=\count143
+\blx@maxsection=\count144
+\blx@maxsegment@0=\count145
+\blx@notetype=\count146
+\blx@parenlevel@text=\count147
+\blx@parenlevel@foot=\count148
+\blx@sectionciteorder@0=\count149
+\labelnumberwidth=\skip46
+\labelalphawidth=\skip47
+\biblabelsep=\skip48
+\bibitemsep=\skip49
+\bibnamesep=\skip50
+\bibinitsep=\skip51
+\bibparsep=\skip52
+\bibhang=\skip53
 \blx@bcfin=\read1
 \blx@bcfout=\write4
-\c@mincomprange=\count138
-\c@maxcomprange=\count139
-\c@mincompwidth=\count140
+\c@mincomprange=\count150
+\c@maxcomprange=\count151
+\c@mincompwidth=\count152
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -208,88 +266,88 @@ File: blx-dm.def 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count141
-\c@savedafterword=\count142
-\c@annotator=\count143
-\c@savedannotator=\count144
-\c@author=\count145
-\c@savedauthor=\count146
-\c@bookauthor=\count147
-\c@savedbookauthor=\count148
-\c@commentator=\count149
-\c@savedcommentator=\count150
-\c@editor=\count151
-\c@savededitor=\count152
-\c@editora=\count153
-\c@savededitora=\count154
-\c@editorb=\count155
-\c@savededitorb=\count156
-\c@editorc=\count157
-\c@savededitorc=\count158
-\c@foreword=\count159
-\c@savedforeword=\count160
-\c@holder=\count161
-\c@savedholder=\count162
-\c@introduction=\count163
-\c@savedintroduction=\count164
-\c@namea=\count165
-\c@savednamea=\count166
-\c@nameb=\count167
-\c@savednameb=\count168
-\c@namec=\count169
-\c@savednamec=\count170
-\c@translator=\count171
-\c@savedtranslator=\count172
-\c@shortauthor=\count173
-\c@savedshortauthor=\count174
-\c@shorteditor=\count175
-\c@savedshorteditor=\count176
-\c@labelname=\count177
-\c@savedlabelname=\count178
-\c@institution=\count179
-\c@savedinstitution=\count180
-\c@lista=\count181
-\c@savedlista=\count182
-\c@listb=\count183
-\c@savedlistb=\count184
-\c@listc=\count185
-\c@savedlistc=\count186
-\c@listd=\count187
-\c@savedlistd=\count188
-\c@liste=\count189
-\c@savedliste=\count190
-\c@listf=\count191
-\c@savedlistf=\count192
-\c@location=\count193
-\c@savedlocation=\count194
-\c@organization=\count195
-\c@savedorganization=\count196
-\c@origlocation=\count197
-\c@savedoriglocation=\count198
-\c@origpublisher=\count199
-\c@savedorigpublisher=\count266
-\c@publisher=\count267
-\c@savedpublisher=\count268
-\c@language=\count269
-\c@savedlanguage=\count270
-\c@origlanguage=\count271
-\c@savedoriglanguage=\count272
-\c@pageref=\count273
-\c@savedpageref=\count274
-\shorthandwidth=\skip51
-\shortjournalwidth=\skip52
-\shortserieswidth=\skip53
-\shorttitlewidth=\skip54
-\shortauthorwidth=\skip55
-\shorteditorwidth=\skip56
-\locallabelnumberwidth=\skip57
-\locallabelalphawidth=\skip58
-\localshorthandwidth=\skip59
-\localshortjournalwidth=\skip60
-\localshortserieswidth=\skip61
-\localshorttitlewidth=\skip62
-\localshortauthorwidth=\skip63
-\localshorteditorwidth=\skip64
+\c@afterword=\count153
+\c@savedafterword=\count154
+\c@annotator=\count155
+\c@savedannotator=\count156
+\c@author=\count157
+\c@savedauthor=\count158
+\c@bookauthor=\count159
+\c@savedbookauthor=\count160
+\c@commentator=\count161
+\c@savedcommentator=\count162
+\c@editor=\count163
+\c@savededitor=\count164
+\c@editora=\count165
+\c@savededitora=\count166
+\c@editorb=\count167
+\c@savededitorb=\count168
+\c@editorc=\count169
+\c@savededitorc=\count170
+\c@foreword=\count171
+\c@savedforeword=\count172
+\c@holder=\count173
+\c@savedholder=\count174
+\c@introduction=\count175
+\c@savedintroduction=\count176
+\c@namea=\count177
+\c@savednamea=\count178
+\c@nameb=\count179
+\c@savednameb=\count180
+\c@namec=\count181
+\c@savednamec=\count182
+\c@translator=\count183
+\c@savedtranslator=\count184
+\c@shortauthor=\count185
+\c@savedshortauthor=\count186
+\c@shorteditor=\count187
+\c@savedshorteditor=\count188
+\c@labelname=\count189
+\c@savedlabelname=\count190
+\c@institution=\count191
+\c@savedinstitution=\count192
+\c@lista=\count193
+\c@savedlista=\count194
+\c@listb=\count195
+\c@savedlistb=\count196
+\c@listc=\count197
+\c@savedlistc=\count198
+\c@listd=\count199
+\c@savedlistd=\count266
+\c@liste=\count267
+\c@savedliste=\count268
+\c@listf=\count269
+\c@savedlistf=\count270
+\c@location=\count271
+\c@savedlocation=\count272
+\c@organization=\count273
+\c@savedorganization=\count274
+\c@origlocation=\count275
+\c@savedoriglocation=\count276
+\c@origpublisher=\count277
+\c@savedorigpublisher=\count278
+\c@publisher=\count279
+\c@savedpublisher=\count280
+\c@language=\count281
+\c@savedlanguage=\count282
+\c@origlanguage=\count283
+\c@savedoriglanguage=\count284
+\c@pageref=\count285
+\c@savedpageref=\count286
+\shorthandwidth=\skip54
+\shortjournalwidth=\skip55
+\shortserieswidth=\skip56
+\shorttitlewidth=\skip57
+\shortauthorwidth=\skip58
+\shorteditorwidth=\skip59
+\locallabelnumberwidth=\skip60
+\locallabelalphawidth=\skip61
+\localshorthandwidth=\skip62
+\localshortjournalwidth=\skip63
+\localshortserieswidth=\skip64
+\localshorttitlewidth=\skip65
+\localshortauthorwidth=\skip66
+\localshorteditorwidth=\skip67
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -301,13 +359,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count275
-\c@textcitetotal=\count276
-\c@textcitemaxnames=\count277
-\c@biburlnumpenalty=\count278
-\c@biburlucpenalty=\count279
-\c@biburllcpenalty=\count280
-\c@smartand=\count281
+\c@textcitecount=\count287
+\c@textcitetotal=\count288
+\c@textcitemaxnames=\count289
+\c@biburlnumpenalty=\count290
+\c@biburlucpenalty=\count291
+\c@biburllcpenalty=\count292
+\c@smartand=\count293
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -319,8 +377,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count282
-\c@bbx:relatedtotal=\count283
+\c@bbx:relatedcount=\count294
+\c@bbx:relatedtotal=\count295
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -347,66 +405,8 @@ File: biblatex.cfg
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip65
-
-For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen107
-))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen108
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count284
-LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count285
-\leftroot@=\count286
-LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count287
-\DOTSCASE@=\count288
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
-\big@size=\dimen109
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count289
-\c@MaxMatrixCols=\count290
-\dotsspace@=\muskip11
-\c@parentequation=\count291
-\dspbrk@lvl=\count292
-\tag@help=\toks19
-\row@=\count293
-\column@=\count294
-\maxfields@=\count295
-\andhelp@=\toks20
-\eqnshift@=\dimen110
-\alignsep@=\dimen111
-\tagshift@=\dimen112
-\tagwidth@=\dimen113
-\totwidth@=\dimen114
-\lineht@=\dimen115
-\@envbody=\toks21
-\multlinegap=\skip66
-\multlinetaggap=\skip67
-\mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/03/24 v5.7 Page Geometry
@@ -603,18 +603,18 @@ File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 (./MATH3714Coursework.aux)
 \openout1 = `MATH3714Coursework.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -659,8 +659,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'MATH3714Coursework.bbl' not found.
 
 No file MATH3714Coursework.bbl.
-Package biblatex Info: Reference section=0 on input line 74.
-Package biblatex Info: Reference segment=0 on input line 74.
+Package biblatex Info: Reference section=0 on input line 75.
+Package biblatex Info: Reference segment=0 on input line 75.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -705,82 +705,257 @@ Package caption Info: End \AtBeginDocument code.
 \tf@toc=\write5
 \openout5 = `MATH3714Coursework.toc'.
 
- [2]
-Overfull \hbox (73.14537pt too wide) in paragraph at lines 86--87
+ [2] [3] [4]
+<1_res_vs_value.png, id=25, 1003.75pt x 1003.75pt>
+File: 1_res_vs_value.png Graphic file (type png)
+<use 1_res_vs_value.png>
+Package pdftex.def Info: 1_res_vs_value.png  used on input line 136.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<1_res_vs_fitted.png, id=27, 702.625pt x 702.625pt>
+File: 1_res_vs_fitted.png Graphic file (type png)
+<use 1_res_vs_fitted.png>
+Package pdftex.def Info: 1_res_vs_fitted.png  used on input line 137.
+(pdftex.def)             Requested size: 140.5225pt x 140.5225pt.
+<1_QQplot.png, id=28, 1003.75pt x 1003.75pt>
+File: 1_QQplot.png Graphic file (type png)
+<use 1_QQplot.png>
+Package pdftex.def Info: 1_QQplot.png  used on input line 140.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<1_Variance.png, id=29, 1003.75pt x 1003.75pt>
+File: 1_Variance.png Graphic file (type png)
+<use 1_Variance.png>
+Package pdftex.def Info: 1_Variance.png  used on input line 141.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+ [5 <./1_res_vs_value.png> <./1_res_vs_fitted.png> <./1_QQplot.png> <./1_Varian
+ce.png>]
+<2_res_vs_value.png, id=37, 1003.75pt x 1003.75pt>
+File: 2_res_vs_value.png Graphic file (type png)
+<use 2_res_vs_value.png>
+Package pdftex.def Info: 2_res_vs_value.png  used on input line 153.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<2_res_vs_fitted.png, id=38, 1003.75pt x 1003.75pt>
+File: 2_res_vs_fitted.png Graphic file (type png)
+<use 2_res_vs_fitted.png>
+Package pdftex.def Info: 2_res_vs_fitted.png  used on input line 154.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<2_QQplot.png, id=39, 1003.75pt x 1003.75pt>
+File: 2_QQplot.png Graphic file (type png)
+<use 2_QQplot.png>
+Package pdftex.def Info: 2_QQplot.png  used on input line 157.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<2_Variance.png, id=40, 1003.75pt x 1003.75pt>
+File: 2_Variance.png Graphic file (type png)
+<use 2_Variance.png>
+Package pdftex.def Info: 2_Variance.png  used on input line 158.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+<sqrt_res_vs_value.png, id=41, 1003.75pt x 1003.75pt>
+File: sqrt_res_vs_value.png Graphic file (type png)
+<use sqrt_res_vs_value.png>
+Package pdftex.def Info: sqrt_res_vs_value.png  used on input line 165.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<sqrt_res_vs_fitted.png, id=42, 481.8pt x 481.8pt>
+File: sqrt_res_vs_fitted.png Graphic file (type png)
+<use sqrt_res_vs_fitted.png>
+Package pdftex.def Info: sqrt_res_vs_fitted.png  used on input line 166.
+(pdftex.def)             Requested size: 144.5411pt x 144.5411pt.
+[6 <./2_res_vs_value.png> <./2_res_vs_fitted.png> <./2_QQplot.png> <./2_Varianc
+e.png>]
+<sqrt_QQplot.png, id=50, 1003.75pt x 1003.75pt>
+File: sqrt_QQplot.png Graphic file (type png)
+<use sqrt_QQplot.png>
+Package pdftex.def Info: sqrt_QQplot.png  used on input line 169.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<sqrt_Variance.png, id=51, 1003.75pt x 1003.75pt>
+File: sqrt_Variance.png Graphic file (type png)
+<use sqrt_Variance.png>
+Package pdftex.def Info: sqrt_Variance.png  used on input line 170.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<3_res_vs_value.png, id=52, 1003.75pt x 1003.75pt>
+File: 3_res_vs_value.png Graphic file (type png)
+<use 3_res_vs_value.png>
+Package pdftex.def Info: 3_res_vs_value.png  used on input line 176.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<3_res_vs_fitted.png, id=53, 1003.75pt x 1003.75pt>
+File: 3_res_vs_fitted.png Graphic file (type png)
+<use 3_res_vs_fitted.png>
+Package pdftex.def Info: 3_res_vs_fitted.png  used on input line 177.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<3_QQplot.png, id=54, 1003.75pt x 1003.75pt>
+File: 3_QQplot.png Graphic file (type png)
+<use 3_QQplot.png>
+Package pdftex.def Info: 3_QQplot.png  used on input line 180.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<3_Variance.png, id=55, 1003.75pt x 1003.75pt>
+File: 3_Variance.png Graphic file (type png)
+<use 3_Variance.png>
+Package pdftex.def Info: 3_Variance.png  used on input line 181.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+ [7 <./sqrt_res_vs_value.png> <./sqrt_res_vs_fitted.png> <./sqrt_QQplot.png> <.
+/sqrt_Variance.png> <./3_res_vs_value.png> <./3_res_vs_fitted.png>]
+<4_res_vs_value.png, id=66, 1003.75pt x 1003.75pt>
+File: 4_res_vs_value.png Graphic file (type png)
+<use 4_res_vs_value.png>
+Package pdftex.def Info: 4_res_vs_value.png  used on input line 189.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<4_res_vs_fitted.png, id=67, 481.8pt x 481.8pt>
+File: 4_res_vs_fitted.png Graphic file (type png)
+<use 4_res_vs_fitted.png>
+Package pdftex.def Info: 4_res_vs_fitted.png  used on input line 190.
+(pdftex.def)             Requested size: 144.5411pt x 144.5411pt.
+<4_QQplot.png, id=68, 1003.75pt x 1003.75pt>
+File: 4_QQplot.png Graphic file (type png)
+<use 4_QQplot.png>
+Package pdftex.def Info: 4_QQplot.png  used on input line 193.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<4_Variance.png, id=69, 1003.75pt x 1003.75pt>
+File: 4_Variance.png Graphic file (type png)
+<use 4_Variance.png>
+Package pdftex.def Info: 4_Variance.png  used on input line 194.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+
+[8 <./3_QQplot.png> <./3_Variance.png> <./4_res_vs_value.png> <./4_res_vs_fitte
+d.png> <./4_QQplot.png> <./4_Variance.png>]
+<5_res_vs_value.png, id=79, 1003.75pt x 1003.75pt>
+File: 5_res_vs_value.png Graphic file (type png)
+<use 5_res_vs_value.png>
+Package pdftex.def Info: 5_res_vs_value.png  used on input line 201.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<5_res_vs_fitted.png, id=80, 481.8pt x 481.8pt>
+File: 5_res_vs_fitted.png Graphic file (type png)
+<use 5_res_vs_fitted.png>
+Package pdftex.def Info: 5_res_vs_fitted.png  used on input line 202.
+(pdftex.def)             Requested size: 144.5411pt x 144.5411pt.
+<5_QQplot.png, id=81, 1003.75pt x 1003.75pt>
+File: 5_QQplot.png Graphic file (type png)
+<use 5_QQplot.png>
+Package pdftex.def Info: 5_QQplot.png  used on input line 205.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+<5_Variance.png, id=82, 1003.75pt x 1003.75pt>
+File: 5_Variance.png Graphic file (type png)
+<use 5_Variance.png>
+Package pdftex.def Info: 5_Variance.png  used on input line 206.
+(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
+ [9 <./5_res_vs_value.png> <./5_res_vs_fitted.png> <./5_QQplot.png> <./5_Varian
+ce.png>] [10]
+Overfull \hbox (73.14537pt too wide) in paragraph at lines 227--228
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
- [3]
-Overfull \hbox (302.12004pt too wide) in paragraph at lines 129--130
+Overfull \hbox (274.74498pt too wide) in paragraph at lines 263--264
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (62.7205pt too wide) in paragraph at lines 133--134
+Overfull \hbox (35.34544pt too wide) in paragraph at lines 267--268
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][] 
+ []
+
+[11]
+Overfull \hbox (60.5454pt too wide) in paragraph at lines 324--325
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][]
+ []
+
+[12]
+Overfull \hbox (3.8455pt too wide) in paragraph at lines 337--338
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (16.44548pt too wide) in paragraph at lines 339--340
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][] 
  []
 
 
-Overfull \hbox (6.02061pt too wide) in paragraph at lines 145--146
+Overfull \hbox (66.84538pt too wide) in paragraph at lines 344--345
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.5454pt too wide) in paragraph at lines 374--375
+[][][][][][][][][][][] 
+ []
+
+[13]
+Overfull \hbox (73.14537pt too wide) in paragraph at lines 388--389
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+][] 
  []
 
 
-Overfull \hbox (12.3206pt too wide) in paragraph at lines 149--150
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
-
- []
-
-[4]
-Overfull \hbox (18.6205pt too wide) in paragraph at lines 159--160
-[][][][][][][][][][][][][][][] 
+Overfull \hbox (73.14537pt too wide) in paragraph at lines 395--396
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
  []
 
 
-Overfull \hbox (6.02054pt too wide) in paragraph at lines 167--168
-[][][][][][][][][][][][][][] 
+Overfull \hbox (35.34544pt too wide) in paragraph at lines 412--413
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+ 
  []
 
-[5] [6] (./MATH3714Coursework.aux)
+[14]
+Overfull \hbox (54.2454pt too wide) in paragraph at lines 428--429
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[] 
+ []
+
+
+Overfull \hbox (66.84538pt too wide) in paragraph at lines 442--443
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[15] (./MATH3714Coursework.aux)
 Package logreq Info: Writing requests to 'MATH3714Coursework.run.xml'.
 \openout1 = `MATH3714Coursework.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14067 strings out of 492649
- 225877 string characters out of 6129621
- 703607 words of memory out of 5000000
- 17789 multiletter control sequences out of 15000+600000
- 10792 words of font info for 39 fonts, out of 8000000 for 9000
+ 14210 strings out of 492649
+ 228354 string characters out of 6129621
+ 716607 words of memory out of 5000000
+ 17910 multiletter control sequences out of 15000+600000
+ 11700 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,43p,881b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,43p,881b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on MATH3714Coursework.pdf (6 pages, 114175 bytes).
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on MATH3714Coursework.pdf (15 pages, 1784674 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
