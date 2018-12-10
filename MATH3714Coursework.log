@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.10)  9 DEC 2018 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.10)  10 DEC 2018 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,172 +706,158 @@ Package caption Info: End \AtBeginDocument code.
 \openout5 = `MATH3714Coursework.toc'.
 
  [2] [3] [4]
-<1_res_vs_value.png, id=25, 1003.75pt x 1003.75pt>
+<pair_cor.png, id=25, 1254.6875pt x 853.1875pt>
+File: pair_cor.png Graphic file (type png)
+<use pair_cor.png>
+Package pdftex.def Info: pair_cor.png  used on input line 136.
+(pdftex.def)             Requested size: 376.40915pt x 255.95822pt.
+ [5 <./pair_cor.png>]
+<1_res_vs_value.png, id=32, 1003.75pt x 1003.75pt>
 File: 1_res_vs_value.png Graphic file (type png)
 <use 1_res_vs_value.png>
-Package pdftex.def Info: 1_res_vs_value.png  used on input line 136.
+Package pdftex.def Info: 1_res_vs_value.png  used on input line 175.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<1_res_vs_fitted.png, id=27, 702.625pt x 702.625pt>
+<1_res_vs_fitted.png, id=33, 702.625pt x 702.625pt>
 File: 1_res_vs_fitted.png Graphic file (type png)
 <use 1_res_vs_fitted.png>
-Package pdftex.def Info: 1_res_vs_fitted.png  used on input line 137.
+Package pdftex.def Info: 1_res_vs_fitted.png  used on input line 176.
 (pdftex.def)             Requested size: 140.5225pt x 140.5225pt.
-<1_QQplot.png, id=28, 1003.75pt x 1003.75pt>
+<1_QQplot.png, id=34, 1003.75pt x 1003.75pt>
 File: 1_QQplot.png Graphic file (type png)
 <use 1_QQplot.png>
-Package pdftex.def Info: 1_QQplot.png  used on input line 140.
+Package pdftex.def Info: 1_QQplot.png  used on input line 179.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<1_Variance.png, id=29, 1003.75pt x 1003.75pt>
+<1_Variance.png, id=35, 1003.75pt x 1003.75pt>
 File: 1_Variance.png Graphic file (type png)
 <use 1_Variance.png>
-Package pdftex.def Info: 1_Variance.png  used on input line 141.
+Package pdftex.def Info: 1_Variance.png  used on input line 180.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
- [5 <./1_res_vs_value.png> <./1_res_vs_fitted.png> <./1_QQplot.png> <./1_Varian
+ [6 <./1_res_vs_value.png> <./1_res_vs_fitted.png> <./1_QQplot.png> <./1_Varian
 ce.png>]
-<2_res_vs_value.png, id=37, 1003.75pt x 1003.75pt>
-File: 2_res_vs_value.png Graphic file (type png)
-<use 2_res_vs_value.png>
-Package pdftex.def Info: 2_res_vs_value.png  used on input line 153.
-(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<2_res_vs_fitted.png, id=38, 1003.75pt x 1003.75pt>
-File: 2_res_vs_fitted.png Graphic file (type png)
-<use 2_res_vs_fitted.png>
-Package pdftex.def Info: 2_res_vs_fitted.png  used on input line 154.
-(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<2_QQplot.png, id=39, 1003.75pt x 1003.75pt>
-File: 2_QQplot.png Graphic file (type png)
-<use 2_QQplot.png>
-Package pdftex.def Info: 2_QQplot.png  used on input line 157.
-(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<2_Variance.png, id=40, 1003.75pt x 1003.75pt>
-File: 2_Variance.png Graphic file (type png)
-<use 2_Variance.png>
-Package pdftex.def Info: 2_Variance.png  used on input line 158.
-(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-
- []
-
-<sqrt_res_vs_value.png, id=41, 1003.75pt x 1003.75pt>
-File: sqrt_res_vs_value.png Graphic file (type png)
-<use sqrt_res_vs_value.png>
-Package pdftex.def Info: sqrt_res_vs_value.png  used on input line 165.
-(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<sqrt_res_vs_fitted.png, id=42, 481.8pt x 481.8pt>
-File: sqrt_res_vs_fitted.png Graphic file (type png)
-<use sqrt_res_vs_fitted.png>
-Package pdftex.def Info: sqrt_res_vs_fitted.png  used on input line 166.
-(pdftex.def)             Requested size: 144.5411pt x 144.5411pt.
-[6 <./2_res_vs_value.png> <./2_res_vs_fitted.png> <./2_QQplot.png> <./2_Varianc
-e.png>]
-<sqrt_QQplot.png, id=50, 1003.75pt x 1003.75pt>
-File: sqrt_QQplot.png Graphic file (type png)
-<use sqrt_QQplot.png>
-Package pdftex.def Info: sqrt_QQplot.png  used on input line 169.
-(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<sqrt_Variance.png, id=51, 1003.75pt x 1003.75pt>
-File: sqrt_Variance.png Graphic file (type png)
-<use sqrt_Variance.png>
-Package pdftex.def Info: sqrt_Variance.png  used on input line 170.
-(pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<3_res_vs_value.png, id=52, 1003.75pt x 1003.75pt>
+<3_res_vs_value.png, id=44, 1003.75pt x 1003.75pt>
 File: 3_res_vs_value.png Graphic file (type png)
 <use 3_res_vs_value.png>
-Package pdftex.def Info: 3_res_vs_value.png  used on input line 176.
+Package pdftex.def Info: 3_res_vs_value.png  used on input line 229.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<3_res_vs_fitted.png, id=53, 1003.75pt x 1003.75pt>
+<3_res_vs_fitted.png, id=45, 1003.75pt x 1003.75pt>
 File: 3_res_vs_fitted.png Graphic file (type png)
 <use 3_res_vs_fitted.png>
-Package pdftex.def Info: 3_res_vs_fitted.png  used on input line 177.
+Package pdftex.def Info: 3_res_vs_fitted.png  used on input line 230.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<3_QQplot.png, id=54, 1003.75pt x 1003.75pt>
+<3_QQplot.png, id=46, 1003.75pt x 1003.75pt>
 File: 3_QQplot.png Graphic file (type png)
 <use 3_QQplot.png>
-Package pdftex.def Info: 3_QQplot.png  used on input line 180.
+Package pdftex.def Info: 3_QQplot.png  used on input line 233.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<3_Variance.png, id=55, 1003.75pt x 1003.75pt>
+<3_Variance.png, id=47, 1003.75pt x 1003.75pt>
 File: 3_Variance.png Graphic file (type png)
 <use 3_Variance.png>
-Package pdftex.def Info: 3_Variance.png  used on input line 181.
+Package pdftex.def Info: 3_Variance.png  used on input line 234.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
- [7 <./sqrt_res_vs_value.png> <./sqrt_res_vs_fitted.png> <./sqrt_QQplot.png> <.
-/sqrt_Variance.png> <./3_res_vs_value.png> <./3_res_vs_fitted.png>]
-<4_res_vs_value.png, id=66, 1003.75pt x 1003.75pt>
+<4_res_vs_value.png, id=48, 1003.75pt x 1003.75pt>
 File: 4_res_vs_value.png Graphic file (type png)
 <use 4_res_vs_value.png>
-Package pdftex.def Info: 4_res_vs_value.png  used on input line 189.
+Package pdftex.def Info: 4_res_vs_value.png  used on input line 246.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<4_res_vs_fitted.png, id=67, 481.8pt x 481.8pt>
+<4_res_vs_fitted.png, id=49, 481.8pt x 481.8pt>
 File: 4_res_vs_fitted.png Graphic file (type png)
 <use 4_res_vs_fitted.png>
-Package pdftex.def Info: 4_res_vs_fitted.png  used on input line 190.
+Package pdftex.def Info: 4_res_vs_fitted.png  used on input line 247.
 (pdftex.def)             Requested size: 144.5411pt x 144.5411pt.
-<4_QQplot.png, id=68, 1003.75pt x 1003.75pt>
+ [7 <./3_res_vs_value.png> <./3_res_vs_fitted.png> <./3_QQplot.png> <./3_Varian
+ce.png>]
+<4_QQplot.png, id=58, 1003.75pt x 1003.75pt>
 File: 4_QQplot.png Graphic file (type png)
 <use 4_QQplot.png>
-Package pdftex.def Info: 4_QQplot.png  used on input line 193.
+Package pdftex.def Info: 4_QQplot.png  used on input line 250.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<4_Variance.png, id=69, 1003.75pt x 1003.75pt>
+<4_Variance.png, id=59, 1003.75pt x 1003.75pt>
 File: 4_Variance.png Graphic file (type png)
 <use 4_Variance.png>
-Package pdftex.def Info: 4_Variance.png  used on input line 194.
+Package pdftex.def Info: 4_Variance.png  used on input line 251.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-
-[8 <./3_QQplot.png> <./3_Variance.png> <./4_res_vs_value.png> <./4_res_vs_fitte
-d.png> <./4_QQplot.png> <./4_Variance.png>]
-<5_res_vs_value.png, id=79, 1003.75pt x 1003.75pt>
+<5_res_vs_value.png, id=60, 1003.75pt x 1003.75pt>
 File: 5_res_vs_value.png Graphic file (type png)
 <use 5_res_vs_value.png>
-Package pdftex.def Info: 5_res_vs_value.png  used on input line 201.
+Package pdftex.def Info: 5_res_vs_value.png  used on input line 258.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<5_res_vs_fitted.png, id=80, 481.8pt x 481.8pt>
+<5_res_vs_fitted.png, id=61, 481.8pt x 481.8pt>
 File: 5_res_vs_fitted.png Graphic file (type png)
 <use 5_res_vs_fitted.png>
-Package pdftex.def Info: 5_res_vs_fitted.png  used on input line 202.
+Package pdftex.def Info: 5_res_vs_fitted.png  used on input line 259.
 (pdftex.def)             Requested size: 144.5411pt x 144.5411pt.
-<5_QQplot.png, id=81, 1003.75pt x 1003.75pt>
+<5_QQplot.png, id=62, 1003.75pt x 1003.75pt>
 File: 5_QQplot.png Graphic file (type png)
 <use 5_QQplot.png>
-Package pdftex.def Info: 5_QQplot.png  used on input line 205.
+Package pdftex.def Info: 5_QQplot.png  used on input line 262.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
-<5_Variance.png, id=82, 1003.75pt x 1003.75pt>
+<5_Variance.png, id=63, 1003.75pt x 1003.75pt>
 File: 5_Variance.png Graphic file (type png)
 <use 5_Variance.png>
-Package pdftex.def Info: 5_Variance.png  used on input line 206.
+Package pdftex.def Info: 5_Variance.png  used on input line 263.
 (pdftex.def)             Requested size: 130.49208pt x 130.49208pt.
- [9 <./5_res_vs_value.png> <./5_res_vs_fitted.png> <./5_QQplot.png> <./5_Varian
-ce.png>] [10]
-Overfull \hbox (73.14537pt too wide) in paragraph at lines 227--228
+
+[8 <./4_res_vs_value.png> <./4_res_vs_fitted.png> <./4_QQplot.png> <./4_Varianc
+e.png> <./5_res_vs_value.png> <./5_res_vs_fitted.png>]
+Overfull \hbox (54.2454pt too wide) in paragraph at lines 294--295
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (54.2454pt too wide) in paragraph at lines 295--296
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][] 
+ []
+
+[9 <./5_QQplot.png> <./5_Variance.png>]
+Overfull \hbox (15.73578pt too wide) detected at line 335
+[] \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 185501 \OMS/cm
+sy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 00
+4119 \OMS/cmsy/m/n/10.95 ^^C [] ^^@ \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\O
+T1/cmr/m/n/10.95 001142 \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 year \OMS/c
+msy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0
+03869 \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 origin
+ []
+
+[10]
+Overfull \hbox (24.91345pt too wide) detected at line 338
+\OMS/cmsy/m/n/10.95 , \OML/cmm/m/it/10.95 mpg \OT1/cmr/m/n/10.95 = []
+ []
+
+[11]
+Overfull \hbox (73.14537pt too wide) in paragraph at lines 351--352
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (274.74498pt too wide) in paragraph at lines 263--264
+Overfull \hbox (274.74498pt too wide) in paragraph at lines 387--388
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (35.34544pt too wide) in paragraph at lines 267--268
+Overfull \hbox (35.34544pt too wide) in paragraph at lines 391--392
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][] 
  []
 
-[11]
-Overfull \hbox (60.5454pt too wide) in paragraph at lines 324--325
+[12]
+Overfull \hbox (60.5454pt too wide) in paragraph at lines 448--449
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][]
  []
 
-[12]
-Overfull \hbox (3.8455pt too wide) in paragraph at lines 337--338
+[13]
+Overfull \hbox (3.8455pt too wide) in paragraph at lines 461--462
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -879,7 +865,7 @@ Overfull \hbox (3.8455pt too wide) in paragraph at lines 337--338
  []
 
 
-Overfull \hbox (16.44548pt too wide) in paragraph at lines 339--340
+Overfull \hbox (16.44548pt too wide) in paragraph at lines 463--464
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -888,59 +874,85 @@ Overfull \hbox (16.44548pt too wide) in paragraph at lines 339--340
  []
 
 
-Overfull \hbox (66.84538pt too wide) in paragraph at lines 344--345
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (60.5454pt too wide) in paragraph at lines 374--375
-[][][][][][][][][][][] 
- []
-
-[13]
-Overfull \hbox (73.14537pt too wide) in paragraph at lines 388--389
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (73.14537pt too wide) in paragraph at lines 395--396
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (35.34544pt too wide) in paragraph at lines 412--413
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
- 
- []
-
-[14]
-Overfull \hbox (54.2454pt too wide) in paragraph at lines 428--429
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[] 
- []
-
-
-Overfull \hbox (66.84538pt too wide) in paragraph at lines 442--443
+Overfull \hbox (10.1455pt too wide) in paragraph at lines 465--466
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[15] (./MATH3714Coursework.aux)
+
+Overfull \hbox (73.14537pt too wide) in paragraph at lines 466--467
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (66.84538pt too wide) in paragraph at lines 488--489
+[][][][][][][][][][][] 
+ []
+
+[14]
+Overfull \hbox (47.94542pt too wide) in paragraph at lines 519--520
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][] 
+ []
+
+
+Overfull \hbox (129.84526pt too wide) in paragraph at lines 530--531
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (205.44511pt too wide) in paragraph at lines 540--541
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (249.54503pt too wide) in paragraph at lines 541--542
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (218.04509pt too wide) in paragraph at lines 542--543
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.04546pt too wide) in paragraph at lines 546--548
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[15]
+Overfull \hbox (3.8455pt too wide) in paragraph at lines 567--568
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.5454pt too wide) in paragraph at lines 568--569
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] 
+ []
+
+[16] (./MATH3714Coursework.aux)
 Package logreq Info: Writing requests to 'MATH3714Coursework.run.xml'.
 \openout1 = `MATH3714Coursework.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14210 strings out of 492649
- 228354 string characters out of 6129621
- 716607 words of memory out of 5000000
- 17910 multiletter control sequences out of 15000+600000
+ 14178 strings out of 492649
+ 227673 string characters out of 6129621
+ 718607 words of memory out of 5000000
+ 17885 multiletter control sequences out of 15000+600000
  11700 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,43p,881b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,43p,881b,1731s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -948,14 +960,16 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
 ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on MATH3714Coursework.pdf (15 pages, 1784674 bytes).
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on MATH3714Coursework.pdf (16 pages, 1440759 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

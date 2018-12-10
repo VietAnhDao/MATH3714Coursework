@@ -109,7 +109,12 @@ The solution is to delete the name column and only include the brand as one of o
 
 
 \subsection{Multicollinearity}
-As the R-code section shows the matrix $\pmb{X}$ form from cylinders, displacement, horsepower, weight, acceleration, year (NOTE: it's doesn't matter about the constant column or the factors since they are linearly independent from the rest). The conditional indicies form from this is:
+As the R-code section shows the matrix $\pmb{X}$ form from cylinders, displacement, horsepower, weight, acceleration, year (NOTE: it's doesn't matter about the constant column or the factors since they are linearly independent from the rest).\\ 
+Eigenvector is:
+$$
+3791200361.7,1365742.4,130921.6,68541.8,1553.3,111.5
+$$
+The conditional indicies form from this is:
 $$
  1,2776,28958,55312,2440751,34013500
 $$
@@ -125,10 +130,44 @@ $$
 0.0&0.3&0.4&-0.8&0.2&0\\
 \end{pmatrix}
 $$
-Clearly the years are independent but it's shows all the other variables are collinear on at leats one other variables. Ridge's regression could be a good model for this. An alternative solution for this is ability to make orthogonal matrix.
-
-\section{Models}
-In this section a model will be created and incrementaly improve upon until it follows the assumption of model and is a good model for the predictor.
+Clearly the years are independent but it's shows all the other variables are collinear on at leats one other variables. Now take the smallest eigenvalue and the eigenvector corresponding to it then shows cylinder is independent from any other variables (very weird, since it's the smallest eigenvalue but yet the eigenvector is linearly independent. Although this could be because cylinders are catergorical data). From the eigenvector corresponding to the $2^{nd},3^{rd}$ and $4^{th}$ smallest eigenvalue implies there is multicollinearity between displacement, horsepower and year. Unfortunately the data set gave roughly the same output when the offending variable are removed.\\
+Another method to observe which values are correlated is to use pairwise correlation:
+\begin{center}
+\includegraphics[scale=0.3]{pair_cor}
+\end{center}
+From this it shows the offending variable with high correlation is cylinder, displacement, horsepower and weight. This makes sense since if you have heavy car you will need more horsepower, more horsepower means more or biggest cylinders which mean higher displacement. Now consider that cylinder, displacement, horsepower and weight is combined into one in the form of:
+$$
+x'=\frac{cylinder+weight}{horsepower+displacement}
+$$
+The reason for this is that the output of this need to be reasonal, $x'$ could have been the product of all the variable but that will give it a large value and therefore when calculating the variance the inverse will be small and hence give large conditional indicies.\\
+Therefore the conditional indicies is:
+$$
+1 ,680,3522
+$$
+And Eigenvector is:
+$$
+\begin{pmatrix}
+-0.1&-0.5&0.9\\
+-0.2&-0.8&-0.5\\
+-1.0&0.2&0.0
+\end{pmatrix}
+$$
+Additionaly, the VIF (variance inflation factor) shows:
+\begin{lstlisting}
+  Variables      VIF
+1     prime 3.211425
+2   acceler 2.060063
+3      year 1.184508
+4    Origin 1.626321
+\end{lstlisting}
+Even though one of the conditional indicies $>1000$ we can ignore since all the VIF $<4$. Therefore we can conclude the data is much less collinear than before.
+%The remedies for this is to conbine those variable into one:
+%$$
+%x'=\frac{x_1+x_2}{x_3}
+%$$
+%Where $x_1,x_2,x_3$ is displacement, horsepower and year respectively.
+%\section{Models}
+%In this section a model will be created and incrementaly improve upon until it follows the assumption of model and is a good model for the predictor.
 
 \subsection{Base Model}
 This model is fitted with no transformation, interaction and with every variable and factors. Lets see the diagnostics plot to observe whether or not this have violated our assumption.
@@ -147,30 +186,44 @@ The Q-Q plots(bottom left) seems mostly fine apart from the upper quartile where
 
 
 
-\subsection{Reciprocal of Explainatory Variable Models}
-The variables displacement, horsepower and weight are assign the reciprocal of it's value. If the model is now fitted around the data the plot obtain to check the assumption of model is:
-\begin{center}
-\includegraphics[scale=0.13]{2_res_vs_value}
-\includegraphics[scale=0.13]{2_res_vs_fitted}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.13]{2_QQplot}
-\includegraphics[scale=0.13]{2_Variance}
-\end{center}
-The diagnostics plots tells us the transformation of the reciprocal of the variable stated above doesn't change the linearity of the model or improve the homoscedacity(bottom right plot) and it's made the normality of the model even worse (bottom right). Therefore we don't use this transformation.\\
+%\subsection{Reciprocal of Explainatory Variable Models}
+%The model for this states:
+%$$
+%mpg = \beta_0 +\frac{\beta_1}{displacement} + \frac{\beta_2}{weight} + \frac{\beta_2}{horse power} + ...
+%$$
+%The variables displacement, horsepower and weight are assign the reciprocal of it's value. If the model is now fitted around the data the plot obtain to check the assumption of model is:
+%\begin{center}
+%\includegraphics[scale=0.13]{model1_res_vs_value}
+%\includegraphics[scale=0.3]{model1_res_vs_fitted}
+%\end{center}
+%\begin{center}
+%\includegraphics[scale=0.13]{model1_QQplot}
+%\includegraphics[scale=0.13]{model1_Variance}
+%\end{center}
+%The diagnostics plots tells us the transformation of the reciprocal of the variable stated above doesn't change the linearity of the model or improve the homoscedacity(bottom right plot) and it's made the normality of the model even worse (bottom right). Therefore we don't use this transformation. This model have also made the normality worse. Therefore this model is unlikely to be use for the final model.\\
+%NOTE: the residual vs year is different from previous model because I've changed it so the x-axis starts at 70 rather than 0.
+%\subsection{Square Root Model}
+%This model states:
+%$$
+%\sqrt{mpg}=\beta_0+.....
+%$$
+%Consider a square root transformation of the model where our responds is the square root then:
+%\begin{center}
+%\includegraphics[scale=0.13]{sqrt_res_vs_value}
+%\includegraphics[scale=0.3]{sqrt_res_vs_fitted}
+%\end{center}
+%\begin{center}
+%\includegraphics[scale=0.13]{sqrt_QQplot}
+%\includegraphics[scale=0.13]{sqrt_Variance}
+%\end{center}
+%This model is slightly better than the previous one. The residual vs fitted shows a slight none linear relationship between residual and fitted. Therefore further transformation to mpg might be needed. Similarly the there could transformation needed for the explainatory variable since the top left plot show a funnel shape behaviour between residual vs displacement, horse power and weight. Futher more they shape of the plot looks very similar, could suggest collinearity between those variables, as previous shown from the Multicollinearity analysis.
 
-\subsection{Square Root Model}
-consider a square root transformation of the model where our responds is the square root then:
-\begin{center}
-\includegraphics[scale=0.13]{sqrt_res_vs_value}
-\includegraphics[scale=0.3]{sqrt_res_vs_fitted}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.13]{sqrt_QQplot}
-\includegraphics[scale=0.13]{sqrt_Variance}
-\end{center}
 
 \subsection{Logarithmic Transformation}
+This model is in the form of:
+$$
+log(mpg)= \beta_0 +.....
+$$
 The model in this have been fitted such that it's the logarithmic of the responds variable. The diagnostic plots shows:
 \begin{center}
 \includegraphics[scale=0.13]{3_res_vs_value}
@@ -184,6 +237,10 @@ This is a relatively good transformation. The residual vs explainatory variable(
 
 
 \subsection{Reciprocal Transformation}
+This model is in the form of:
+$$
+\frac{1}{mpg}= \beta_0 + ....
+$$
 The model in this have been fitted such that it's the reciprocal of the responds variable. The diagnostic plots shows:
 \begin{center}
 \includegraphics[scale=0.13]{4_res_vs_value}
@@ -207,19 +264,86 @@ This model we perform a transformation of mpg to reciprocal of that then transfo
 \end{center}
 From this we can observe that the variance is more stablized, from bottom right plot, from the logarithmic tranformation compared to the reciprocal model. The linearity of the model (top right plot) is roughly the same of the reciprocal model, it's not a straight line but it fairs better than the square root transformation or the base model. The normality has improved from the reciprocal model (q-q plot, bottom left). Therefore this model is a good model compared to all the previous model.
 
-\subsection{Box-Cox Transformation}
-Since our responds (mpg) is possitive then the Box-Cox transformation is appropriet.
-
-\subsection{Ridge's Regression}
-
-\section{Variables Selection for Models}
-In this section we may split the table (observation) into two table. One table is used to fit our model to the data while the other is used to judge how well the model predict given the parameters that model haven't seem before.
-
-
+%\subsection{Box-Cox Transformation}
+%Since our responds (mpg) is possitive then the Box-Cox transformation is appropriate. Running the R-code gives us this interval for the lambda values:
+%\begin{center}
+%\includegraphics[scale=0.3]{boxcox}
+%\end{center}
+%Therefore the best suggestion for a lambda value is $\lambda = -0.5$ this mean the model is:
+%$$
+%mpg^{(-0.5)}=\frac{mpg^{-0.5}-1}{-0.5*mpg^{-1.5}}
+%$$
+%\subsection{Ridge's Regression}
+%Using the R code for Ridges regression. The lambda (k value) is very small, possibly even zero. Therefore it can be conclude that Ridge's Regression was not helpful for this scenario.
+%\subsection{Selecting Model}
+%An attemp was made to split the data file into two catergories, one training and one testing. Unfortunately, the to run the test data to obtain how well the models perform much exceeded the stack limit of R and the amount of Ram in my computers and therefore unable to attain how well each of the model perform. The only other criterior is the how well the model conform to the assumption and the residual of the model.\\
+%From the analysis of the model assumption analysis above the logarithmic 
+%\textbf{Residual}
+%running the R-code provide gives the value of:
+%\begin{lstlisting}
+%         base square root      log reciprocal   model1 log reciprocal Ridge
+%[1,] 3841.958    32.73854 4.862929 0.01028882 3328.877       4.862929 33.53
+%\end{lstlisting}
+%From this the worse models are the base model, model1 while log and reciprocal model perform better than the rest. Therefore the model that will be chosen is the reciprocal and closely followed the log model.
+\subsection{Model Analysis}
+An attemp was made to split the data file into two catergories, one training and one testing. Unfortunately, the to run the test data to obtain how well the models perform much exceeded the stack limit of R and the amount of Ram in my computers and therefore unable to attain how well each of the model perform. The only other criterior is the how well the model conform to the assumption and the residual of the model.\\
+From the analysis of the model assumption analysis above the logarithmic 
+\textbf{Residual}
+running the R-code provide gives the value of:
+\begin{lstlisting}
+         base square root      log reciprocal   model1 log reciprocal Ridge
+[1,] 3841.958    32.73854 4.862929 0.01028882 3328.877       4.862929 33.53
+\end{lstlisting}
+From this the worse models are the base model, model1 while log and reciprocal model perform better than the rest. Therefore the model that will be chosen is the reciprocal and closely followed the log model. The summary of these model also shows that the log and reciprocal model have a Adjusted-R of about 0.65 which is good considering there AIC isn't used yet.\\
+NOTE: lots more model was produce and analysed but due to space contraight was not included in the report. The model1 correspond to a navie attempt where $mpg =\beta_0 \frac{\beta_1}{cylinder}+\frac{\beta_2}{displacement}+\frac{\beta_3}{horsepower}+...$ while Ridge regression was not included due to the fact that it produce very small $k$ values suggesting a lot of the parameters should be zero.
 \section{Influential Values (Outliers)}
-Using residual vs leverage and Cook's distance to check outlier of the data. This may show values in the data which influence our model. Should any be found we may need to remove that observation from our model. 
+By checking the Cook's distance the outlier will be showns and subsequently remove. Using the R-code from the Diagnostics R-code section the two model shows that the value:
+\begin{lstlisting}
+29, 183, 333, 375 
+\end{lstlisting}
+Both of the model agress which observation should be remove.
+Clearly these model affect the paramters so much that these values should be omitted.\\
+After applying the correction to collinearity there seems to be an extra outlier namely 393 which correspond to the 2018 car. Therefore remove that data too.
+\section{Variables Selection for Models}
+Using AIC(Akaike information criterion) the model can be reduce down including all of it's interactions. Unfortunately due to the solution of solving the multicollineaity, it has seem to made it so the AIC can't perform the variable reduction if interaction is included. Therefore these model will not include interaction.\\
+When AIC is perform on both of these model without interaction the model shows that acceleration is not needed. Therefore the final coefficient for the model is:
+\begin{lstlisting}
+#Logarithmic model
+
+# Call:
+#   lm(formula = log(mpg) ~ prime + year + origin, data = dat3)
+# 
+# Coefficients:
+#   (Intercept)        prime         year       origin  
+# 0.11322      0.08052      0.02581      0.09420  
+
+#Reciprocal Model
+
+#   lm(formula = 1/mpg ~ prime + year + origin, data = dat3)
+# 
+# Coefficients:
+#   (Intercept)        prime         year       origin  
+# 0.185501    -0.004119    -0.001142    -0.003869  
+\end{lstlisting}
+The AIC for the logarithmic model is $-1276.9$ while reciprocal is $-3609.66$. Which shows the logarithmic model is much better, but this is false as shown in the next section.
 
 
+\section{Interpretation of Model}
+The better model to select is the reciprocal model. The reason is that the logarithmic model is not very well suited for this is because mpg is always greater than zero but this is against our intuition since if horsepower tends to infinity then the mpg should also go very large, but the log model state that this model tends to a constant if all other variable is kept at the same value. Therefore the better model is to use the reciprocal model, which is in the form of:
+$$
+\frac{1}{mpg}=0.185501-0.004119*\frac{cylinder+weight}{horsepower + displacement}-0.001142*year-0.003869*origin  
+$$
+$$
+\Leftrightarrow mpg = \frac{1}{0.185501-0.004119*\frac{cylinder+weight}{horsepower + displacement}-0.001142*year-0.003869*origin}
+$$
+This model, somewhat, conforms to our intuition. As the horsepower and displacement goes up then the mpg goes down. As the year goes up then so does the mpg (i.e. the newer the car the higher the mpg of that car).
+
+
+\section{Predicting Values}
+We are given Japanese manufactured (in 2000) car, which has weight 2734 lbs, engine displace- ment 81 ins3, horsepower 101 hp, 4 cylinders, and acceleration (0–60) is 12.6 seconds
+
+\section{Summary and Reflection}
+There was a few problems such as fitting the model before solving the multicollinearity problem to check the assumption then revisiting to re-check the model assumptions. The second problem is that I should have used $\frac{1}{cylinder+weight+horspower+displacement}$ as the new prime variable since this would make a better explaination to why the mpg decrease and those variable increase.
 \newpage
 \section{R-Code}
 \subsection{Cleaning data}
@@ -337,6 +461,26 @@ dat$weight,dat$acceleration,dat$year))
 [1] 61572.72417  1168.64981   361.83087   261.80486    39.41183    10.55754
 > max(S$d)/S$d
 [1]    1.00000   52.68706  170.16990  235.18557 1562.29040 5832.10936
+#Solving MultiCollinearity
+prime = (dat$cylinders+dat$weight)/(dat$horsepower+dat$displacement)
+check_multicollinearity(as.data.frame(cbind(prime,dat$acceleration,dat$year)))
+# [1] "Eigenvalues"
+# [1] 2423800.9    3567.0     688.2
+# [1] "Max Eigenvalue/Eigenvalues"
+# [1]    1  680 3522
+# [1] "Eigenvectors"
+# [,1] [,2] [,3]
+# [1,] -0.1 -0.5  0.9
+# [2,] -0.2 -0.8 -0.5
+# [3,] -1.0  0.2  0.0
+# [1] 1556.85611   59.72403   26.23276
+# [1]  1.00000 26.06750 59.34779
+
+vif(as.data.frame(cbind(prime,dat$acceleration,dat$year)))
+# Variables      VIF
+# 1     prime 2.103025
+# 2        V2 1.873807
+# 3        V3 1.175262
 \end{lstlisting}
 \subsection{Models}
 \textbf{First Model}
@@ -368,91 +512,78 @@ model2 = function(dat){
   dattemp$weight=1/dattemp$weight
   return(lm(mpg~.,data = dattemp))
 }
+
+#Ridge's Regresson
+ridge=function(dat){
+  library(MASS)
+  return(lm.ridge(mpg~.,data = dat, lambda = seq(0, 0.000001, 0.0000001)))
+}
+#Box-Cox transformation
+box_cox = function(dat){
+  base = lm(mpg~., data = dat)
+  boxcox.lm = boxcox(base)
+  return(boxcox.lm)
+}
 \end{lstlisting}
 \subsection{Diagnostics}
 \begin{lstlisting}
-#DIAGNOSTICS----------------------------------------------------------------
-Res_VS_value=function(model_no,model,dat){
-  #saving plot
-  png(paste(model_no,"res_vs_value.png",sep = "_"))
-  #Residual vs variables not including the make of the car
-  no_variable = 7
-  res = model$residuals
-  dattemp=cbind.data.frame(dat$cylinders,dat$displacement,
-  dat$horsepower,dat$weight,dat$acceleration,dat$year,dat$origin)
-  colnames(dattemp)=c("cylinders","displacement","horsepower",
-  "weight","acceleration","year","origin")
-  par(mfrow=c(3,3))
-  for(i in 1:no_variable){
-    print(names(dattemp)[i])
-    plot(dattemp[,i],res,ylab = "residual",xlab = toString(names(dattemp)[i]))
-  }
-  dev.off()
-  
-  #plotting the plot
-  for(i in 1:no_variable){
-    print(names(dattemp)[i])
-    plot(dattemp[,i],res,ylab = "residual",xlab = toString(names(dattemp)[i]))
-  }
+#BENCHMARK-----------------------------------------------------------------------------
+#Testing for the residual of the model
+res_bench=function(dat){
+  base = base_model(dat)
+  square_root = sqrt_model(dat)
+  Log_model = log_model(dat)
+  rec_y = recip_y(dat)
+  model1 = model2(dat)
+  log_recip_model = lm(log(1/mpg)~., data = dat)
+  LinRidge = ridge(dat)
+  res_summary=cbind(sum(base$residuals^2), sum(square_root$residuals^2),sum(Log_model$residuals^2),
+                    sum(rec_y$residuals^2),sum(model1$residuals^2),sum(log_recip_model$residuals^2),33.53)
+  colnames(res_summary)=c("base","square root","log","reciprocal","model1", "log reciprocal","Ridge")
+  print(res_summary)
 }
 
-Res_VS_fit=function(model_no,model){
-  #save the plot
-  png(paste(model_no,"res_vs_fitted.png",sep = "_"))
-  plot(model,1)
-  dev.off()
-  
-  #plot the plots
-  plot(preds,res,xlab = "fitted",ylab = "residuals")
-  
-}
+#Diagnostics-of-Model--------------------------------------------------
 
-Normal=function(model_no,model){
-  #saving plot
-  png(paste(model_no,"QQplot.png",sep = "_"),width = 1000,height = 1000)
-  res = model$residuals
-  qqnorm(res)
-  qqline(res)
-  dev.off()
-  
-  #plot the plot
-  qqnorm(res)
-  qqline(res)
-}
-
-HomoSce=function(model_no,model){
-  #plotting
-  plot(model,3)
-  
-  #saving plot
-  png(paste(model_no,"Variance.png",sep = "_"),width = 1000, height = 1000)
-  plot(model,3)
-  dev.off()
-}
-
-check_assumption=function(model_no,model,dat){
-  HomoSce(model_no,model)
-  Normal(model_no,model)
-  Res_VS_value(model_no,model, dat)
-  Res_VS_fit(model_no,model)
-}
-\end{lstlisting}
-\subsection{Diagnostics of the Model}
-\begin{lstlisting}
-#Diagnostics-of-Model--------------------------------------------------------
-#Running these codes will force save the plots onto the disk.
+#Initializing the models.
 base = base_model(dat)
 square_root = sqrt_model(dat)
 Log_model = log_model(dat)
 rec_y = recip_y(dat)
 model1 = model2(dat)
 log_recip_model = lm(log(1/mpg)~., data = dat)
+LinRidge = ridge(dat)
 
+#Checking the assumption of models.
 check_assumption("base",base,dat)
 check_assumption("model1",model1,dat)
 check_assumption("sqrt",square_root,dat)
 check_assumption("log",log_model,dat)
 check_assumption("reciprocal",rec_y,dat)
 check_assumption("log_reciprocal",log_recip_model,dat)
+
+#Checking which model has the best residual
+res_bench(dat)
+# base square root     log reciprocal   model1 log reciprocal Ridge
+# [1,] 8129.847    83.09975 5.60372 0.03921142 3328.877       14.86362 33.53
+\end{lstlisting}
+\subsection{Removing Outliers}
+\begin{lstlisting}
+dat = dat[-c(29,183,333,375),]
+dat = dat[-393]
+\end{lstlisting}
+
+\subsection{AIC}
+
+\begin{lstlisting}
+dat3=dat2[-6]
+final_log = lm(log(mpg) ~ .^2, data = dat3)
+final_rec = lm(1/mpg ~ .^2, data = dat3)
+
+#No interactions.
+final_log = lm(log(mpg)~., data = dat3)
+final_rec = lm(1/mpg~., data = dat3)
+step(final_log, direction="both")
+step(final_rec,direction = "both")
 \end{lstlisting}
 \end{document}
