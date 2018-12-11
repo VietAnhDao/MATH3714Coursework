@@ -12,7 +12,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4}Encoding Car Makers}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Overfitting Caused by Uniquiness of Names}{4}
+\contentsline {subsection}{\numberline {2.5}Overfitting Caused by Uniqueness of Names}{4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.6}Multicollinearity}{4}
 \defcounter {refsection}{0}\relax 
@@ -26,11 +26,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.11}Model Analysis}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Influential Values (Outliers)}{9}
+\contentsline {section}{\numberline {3}Influential Values (Outliers)}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Variables Selection for Models}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Interpretation of Model}{10}
+\contentsline {section}{\numberline {5}Interpretation of Model}{11}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Predicting Values}{11}
 \defcounter {refsection}{0}\relax 

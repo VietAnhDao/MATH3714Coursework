@@ -67,7 +67,7 @@
 %%% The "real" document content comes below...
 
 \title{MATH3714 Coursework}
-\author{Viet Dao\\email: mm16vd@leeds.ac.uk}
+\author{Viet Dao\\email: mm16vd@leeds.ac.uk\\Github:https://github.com/VietAnhDao/MATH3714Coursework}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 % File is created and written to disk by the above package
@@ -79,47 +79,47 @@
 \newpage
 
 \section{Introduction}
-We have been given a data frame $\textbf{A}_{393x9}$ which is the table of different cars with mpg, cylinders, displacement, horsepower, weight, acceleration, year, origin and name for a given car. Our goals is to be make a model that is capable of predicting mpg from our data given. Now we plit up $\textbf{A}_{393x9}$ into $\textbf{Y}_{393x1}$ which contains only mpg and $\textbf{Y}_{393x8}$ which contains everything in $\textbf{A}_{393x9}$ apart from mpg. This sets up our responds and explainatory variable.
+We have been given a data frame $\textbf{A}_{393x9}$ which is the table of different cars with mpg, cylinders, displacement, horsepower, weight, acceleration, year, origin and name for a given car. Our goals are to make a model that is capable of predicting mpg from our data given. Now we split up $\textbf{A}_{393x9}$ into $\textbf{Y}_{393x1}$ which contains only mpg and $\textbf{Y}_{393x8}$ which contains everything in $\textbf{A}_{393x9}$ apart from mpg. This sets up our response and explanatory variable.
 
 \section{Initial Data Analysis and Error Correcting}
-In this prelimatory stage we want to investigate outliers and possible missing data in our dataframe $\textbf{A}_{393x9}$. The summary of our data is a useful point to start from. From this there are several problems with the data:
+In this preliminary stage, we want to investigate outliers and possible missing data in our data frame $\textbf{A}_{393x9}$. The summary of our data is a useful point to start from. From this there are several problems with the data:
 \subsection{Error in Years}
-First there is a problem with a data in the year. the summary says the earliest car made was in 18, is it 1918 or 2018?. On further inspection using View(dat) command we can see the name of that car is 'vw golf estate S 1.4 TSI' clearly from 2018 rather than 1918. This need to be changed from 18 to 118. Using the code in section `R-code` we have fixed the year for the anomalies.
+First, there is a problem with data in the year. the summary says the earliest car made was in 18, is it 1918 or 2018?. On further inspection using View(dat) command we can see the name of that car is 'vw golf estate S 1.4 TSI' clearly from 2018 rather than 1918. This need to be changed from 18 to 118. Using the code in section `R-code` we have fixed the year for the anomalies.
 
 \subsection{Problems with Names}
-The second problem is the name of the cars. This problem lies in the make of the car and the name of the cars are in the same string hence we are not able to 'encode' this properly i.e. amc hornet, amc gremlin are almost identical but if we were to fit these values under the model it would be treated as different. From here, the name can be plit into two more groups, which is make of the car and name of the car. From there the make of the car can be encoded, similar to the origin of the car.\\
+The second problem is the name of the cars. This problem lies in the making of the car and the name of the cars are in the same string hence we are not able to 'encode' this properly i.e. amc hornet, amc gremlin are almost identical but if we were to fit these values under the model it would be treated as different. From here, the name can be split into two more groups, which is made of the car and the name of the car. From there the make of the car can be encoded, similar to the origin of the car.\\
 \textbf{Solution}\\
 The first thing to notice in the 'name' header is that the first word is the 'make' of the car and the rest is the 'model' of the car. Now take the first word of the string and add it to make while for name remove the first word of the string.\\
 This should produce a new table with 'make' and 'name'.\\
 NOTE: when importing the table the 'stringAsFactors=F' is a must else this wouldn't work.
 
 \subsection{Duplication of Car Makers}
-Another problem lies in the fact that the data use several acronyms for the name make i.e. chevrolet and chevy, vw and volkswagen etc... This is a problem since it adds unwated complexity to our data. Therefore the data needs to be changed.\\
+Another problem lies in the fact that the data use several acronyms for the name make i.e. chevrolet and chevy, vw and volkswagen etc... This is a problem since it adds unwanted complexity to our data. Therefore the data needs to be changed.\\
 \textbf{Solution}\\
 From this we need to change all the maker so that the name is the same i.e. `vw`, `vokswagen` and `volkswagen` should be `volkswagen` etc...
 
 \subsection{Encoding Car Makers}
-A problem that arise from spliting the `name` column into `name` and `make` is the fact that the `make` is a catergorical data and this need to be encoded i.e. convert catergory into integers, similarly to the origin which is a catergorical data but represented by 1-3.\\
+A problem that arises from splitting the `name` column into `name` and `make` is the fact that the `make` is a categorical data and this need to be encoded i.e. convert category into integers, similarly to the origin which is a categorical data but represented by 1-3.\\
 \textbf{Solution}\\
 We encode the car makers and the origin using r inbuilt factor function.
-\subsection{Overfitting Caused by Uniquiness of Names}
-The name of the vehicle is also a problem. This is beacause the vehical name is very unique and dependent on the maker of that car i.e. `100ls' is dependent on audi since only `audi' make cars with those names. This also poses the problem of that the name is so unique that it can cause over fitting.\\ 
+\subsection{Overfitting Caused by Uniqueness of Names}
+The name of the vehicle is also a problem. This is because the vehicle name is very unique and dependent on the maker of that car i.e. `100ls' is dependent on audi since only `audi' make cars with those names. This also poses the problem of that the name is so unique that it can cause overfitting.\\ 
 \textbf{Solution}\\
-The solution is to delete the name column and only include the brand as one of our explainatory variable.
+The solution is to delete the name column and only include the brand as one of our explanatory variables.
 
 
 \subsection{Multicollinearity}
-As the R-code section shows the matrix $\pmb{X}$ form from cylinders, displacement, horsepower, weight, acceleration, year (NOTE: it's doesn't matter about the constant column or the factors since they are linearly independent from the rest).\\ 
+As the R-code section shows the matrix $\pmb{X}$ form from cylinders, displacement, horsepower, weight, acceleration, year (NOTE: it's doesn't matter about the constant column or the factors since they are linearly independent of the rest).\\ 
 Eigenvector is:
 $$
 3791200361.7,1365742.4,130921.6,68541.8,1553.3,111.5
 $$
-The conditional indicies form from this is:
+The conditional indices form from this is:
 $$
  1,2776,28958,55312,2440751,34013500
 $$
 Clearly all $\lambda_i>1000$ apart from the first value, hence this is a sign of severe collinearity.\\
-From this the eigen vectors of $\pmb{X}$ is:
+From this the eigenvectors of $\pmb{X}$ is:
 $$
 \begin{pmatrix}
 0.0&0.0&0.0&0.0&0.0&1\\
@@ -130,17 +130,17 @@ $$
 0.0&0.3&0.4&-0.8&0.2&0\\
 \end{pmatrix}
 $$
-Clearly the years are independent but it's shows all the other variables are collinear on at leats one other variables. Now take the smallest eigenvalue and the eigenvector corresponding to it then shows cylinder is independent from any other variables (very weird, since it's the smallest eigenvalue but yet the eigenvector is linearly independent. Although this could be because cylinders are catergorical data). From the eigenvector corresponding to the $2^{nd},3^{rd}$ and $4^{th}$ smallest eigenvalue implies there is multicollinearity between displacement, horsepower and year. Unfortunately the data set gave roughly the same output when the offending variable are removed.\\
+Clearly, the years are independent but it's shows all the other variables are collinear on at least one other variable. Now take the smallest eigenvalue and the eigenvector corresponding to it then shows cylinder is independent of any other variables (very weird, since it's the smallest eigenvalue but yet the eigenvector is linearly independent. Although this could be because cylinders are categorical data). From the eigenvector corresponding to the $2^{nd},3^{rd}$ and $4^{th}$ smallest eigenvalue implies there is multicollinearity between displacement, horsepower and year. Unfortunately, the data set gave roughly the same output when the offending variable are removed.\\
 Another method to observe which values are correlated is to use pairwise correlation:
 \begin{center}
 \includegraphics[scale=0.3]{pair_cor}
 \end{center}
-From this it shows the offending variable with high correlation is cylinder, displacement, horsepower and weight. This makes sense since if you have heavy car you will need more horsepower, more horsepower means more or biggest cylinders which mean higher displacement. Now consider that cylinder, displacement, horsepower and weight is combined into one in the form of:
+From this, it shows the offending variable with high correlation is cylinder, displacement, horsepower and weight. This makes sense since if you have a heavy car you will need more horsepower, more horsepower means more or biggest cylinders which mean higher displacement. Now consider that cylinder, displacement, horsepower and weight is combined into one in the form of:
 $$
 x'=\frac{cylinder+weight}{horsepower+displacement}
 $$
-The reason for this is that the output of this need to be reasonal, $x'$ could have been the product of all the variable but that will give it a large value and therefore when calculating the variance the inverse will be small and hence give large conditional indicies.\\
-Therefore the conditional indicies is:
+The reason for this is that the output of this need to be reasonable, $x'$ could have been the product of all the variable but that will give it a large value and therefore when calculating the variance the inverse will be small and hence give large conditional indices.\\
+Therefore the conditional indices are:
 $$
 1 ,680,3522
 $$
@@ -152,7 +152,7 @@ $$
 -1.0&0.2&0.0
 \end{pmatrix}
 $$
-Additionaly, the VIF (variance inflation factor) shows:
+Additionally, the VIF (variance inflation factor) shows:
 \begin{lstlisting}
   Variables      VIF
 1     prime 3.211425
@@ -160,17 +160,17 @@ Additionaly, the VIF (variance inflation factor) shows:
 3      year 1.184508
 4    Origin 1.626321
 \end{lstlisting}
-Even though one of the conditional indicies $>1000$ we can ignore since all the VIF $<4$. Therefore we can conclude the data is much less collinear than before.
-%The remedies for this is to conbine those variable into one:
+Even though one of the conditional indices $>1000$ we can ignore since all the VIF $<4$. Therefore we can conclude the data is much less collinear than before.
+%The remedies for this is to combine those variables into one:
 %$$
 %x'=\frac{x_1+x_2}{x_3}
 %$$
 %Where $x_1,x_2,x_3$ is displacement, horsepower and year respectively.
 %\section{Models}
-%In this section a model will be created and incrementaly improve upon until it follows the assumption of model and is a good model for the predictor.
+%In this section a model will be created and incrementally improve upon until it follows the assumption of the model and is a good model for the predictor.
 
 \subsection{Base Model}
-This model is fitted with no transformation, interaction and with every variable and factors. Lets see the diagnostics plot to observe whether or not this have violated our assumption.
+This model is fitted with no transformation, interaction and with every variable and factors. Let's see the diagnostics plot to observe whether or not this has violated our assumption.
 \begin{center}
 \includegraphics[scale=0.13]{1_res_vs_value}
 \includegraphics[scale=0.2]{1_res_vs_fitted}
@@ -179,10 +179,10 @@ This model is fitted with no transformation, interaction and with every variable
 \includegraphics[scale=0.13]{1_QQplot}
 \includegraphics[scale=0.13]{1_Variance}
 \end{center}
-From the residual vs fitted (top right), the plot show a none linear trends this implies a transformation is needed to make the responds variable(mpg) to be linear.\\
-The top right graph which is residual vs fitted we can observe a none-horizontal line across zero. Therefore this may also implies that a stabilizing variance transformation of the mpg is needed.\\
-The multiple plots(top left) suggest some of the variable used is not linear. Specifically this suggest displacement, horsepower and weight are not linear. There could also be more.\\
-The Q-Q plots(bottom left) seems mostly fine apart from the upper quartile where values diviate from the line drastically. This may pose a problem later on.
+From the residual vs fitted (top right), the plot shows a none linear trends this implies a transformation is needed to make the response variable(mpg) to be linear.\\
+The top right graph which is residual vs fitted we can observe a none-horizontal line across zero. Therefore this may also imply that a stabilizing variance transformation of the mpg is needed.\\
+The multiple plots(top left) suggest some of the variable used is not linear. Specifically, this suggests displacement, horsepower and weight are not linear. There could also be more.\\
+The Q-Q plots(bottom left) seems mostly fine apart from the upper quartile where values deviate from the line drastically. This may pose a problem later on.
 
 
 
@@ -253,7 +253,7 @@ The model in this have been fitted such that it's the reciprocal of the responds
 This model seems to be good for linearity of the model as shown by the explainatory variable(top left) to be more spread out and doesn't have a funnel shape as previous plots. Similarly the same can be said for the residual vs fitted plot. The problem is that this model have made the homoscedacity worse and normality of this model is slightly worse than our original model.
 
 \subsection{Log-Reciprocal model}
-This model we perform a transformation of mpg to reciprocal of that then transform it again into a logarithmics reciprocal of the mpg.
+This model we perform a transformation of mpg to reciprocal of that then transform it again into a logarithmic reciprocal of the mpg.
 \begin{center}
 \includegraphics[scale=0.13]{5_res_vs_value}
 \includegraphics[scale=0.3]{5_res_vs_fitted}
@@ -262,10 +262,10 @@ This model we perform a transformation of mpg to reciprocal of that then transfo
 \includegraphics[scale=0.13]{5_QQplot}
 \includegraphics[scale=0.13]{5_Variance}
 \end{center}
-From this we can observe that the variance is more stablized, from bottom right plot, from the logarithmic tranformation compared to the reciprocal model. The linearity of the model (top right plot) is roughly the same of the reciprocal model, it's not a straight line but it fairs better than the square root transformation or the base model. The normality has improved from the reciprocal model (q-q plot, bottom left). Therefore this model is a good model compared to all the previous model.
+From this, we can observe that the variance is more stabilized, from the bottom right plot, from the logarithmic transformation compared to the reciprocal model. The linearity of the model (top right plot) is roughly the same as the reciprocal model, it's not a straight line but it fairs better than the square root transformation or the base model. The normality has improved from the reciprocal model (q-q plot, bottom left). Therefore this model is a good model compared to all the previous model.
 
 %\subsection{Box-Cox Transformation}
-%Since our responds (mpg) is possitive then the Box-Cox transformation is appropriate. Running the R-code gives us this interval for the lambda values:
+%Since our response (mpg) is positive then the Box-Cox transformation is appropriate. Running the R-code gives us this interval for the lambda values:
 %\begin{center}
 %\includegraphics[scale=0.3]{boxcox}
 %\end{center}
@@ -274,9 +274,9 @@ From this we can observe that the variance is more stablized, from bottom right 
 %mpg^{(-0.5)}=\frac{mpg^{-0.5}-1}{-0.5*mpg^{-1.5}}
 %$$
 %\subsection{Ridge's Regression}
-%Using the R code for Ridges regression. The lambda (k value) is very small, possibly even zero. Therefore it can be conclude that Ridge's Regression was not helpful for this scenario.
+%Using the R code for Ridges regression. The lambda (k value) is very small, possibly even zero. Therefore it can be concluded that Ridge's Regression was not helpful in this scenario.
 %\subsection{Selecting Model}
-%An attemp was made to split the data file into two catergories, one training and one testing. Unfortunately, the to run the test data to obtain how well the models perform much exceeded the stack limit of R and the amount of Ram in my computers and therefore unable to attain how well each of the model perform. The only other criterior is the how well the model conform to the assumption and the residual of the model.\\
+%An attempt was made to split the data file into two categories, one training and one testing. Unfortunately, the to run the test data to obtain how well the models perform much exceeded the stack limit of R and the amount of Ram in my computers and therefore unable to attain how well each of the models performs. The only other criteria are how well the model conforms to the assumption and the residual of the model.\\
 %From the analysis of the model assumption analysis above the logarithmic 
 %\textbf{Residual}
 %running the R-code provide gives the value of:
@@ -284,9 +284,9 @@ From this we can observe that the variance is more stablized, from bottom right 
 %         base square root      log reciprocal   model1 log reciprocal Ridge
 %[1,] 3841.958    32.73854 4.862929 0.01028882 3328.877       4.862929 33.53
 %\end{lstlisting}
-%From this the worse models are the base model, model1 while log and reciprocal model perform better than the rest. Therefore the model that will be chosen is the reciprocal and closely followed the log model.
+%From this the worse models are the base model, model1 while log and reciprocal model perform better than the rest. Therefore the model that will be chosen is reciprocal and closely followed the log model.
 \subsection{Model Analysis}
-An attemp was made to split the data file into two catergories, one training and one testing. Unfortunately, the to run the test data to obtain how well the models perform much exceeded the stack limit of R and the amount of Ram in my computers and therefore unable to attain how well each of the model perform. The only other criterior is the how well the model conform to the assumption and the residual of the model.\\
+An attempt was made to split the data file into two categories, one training and one testing. Unfortunately, the to run the test data to obtain how well the models perform much exceeded the stack limit of R and the amount of Ram in my computers and therefore unable to attain how well each of the models performs. The only other criteria are how well the model conforms to the assumption and the residual of the model.\\
 From the analysis of the model assumption analysis above the logarithmic 
 \textbf{Residual}
 running the R-code provide gives the value of:
@@ -294,19 +294,19 @@ running the R-code provide gives the value of:
          base square root      log reciprocal   model1 log reciprocal Ridge
 [1,] 3841.958    32.73854 4.862929 0.01028882 3328.877       4.862929 33.53
 \end{lstlisting}
-From this the worse models are the base model, model1 while log and reciprocal model perform better than the rest. Therefore the model that will be chosen is the reciprocal and closely followed the log model. The summary of these model also shows that the log and reciprocal model have a Adjusted-R of about 0.65 which is good considering there AIC isn't used yet.\\
-NOTE: lots more model was produce and analysed but due to space contraight was not included in the report. The model1 correspond to a navie attempt where $mpg =\beta_0 \frac{\beta_1}{cylinder}+\frac{\beta_2}{displacement}+\frac{\beta_3}{horsepower}+...$ while Ridge regression was not included due to the fact that it produce very small $k$ values suggesting a lot of the parameters should be zero.
+From this, the worse models are the base model, model1 while log and reciprocal model perform better than the rest. Therefore the model that will be chosen is reciprocal and closely followed the log model. The summary of these model also shows that the log and reciprocal model have an Adjusted-R of about 0.65 which is good considering there AIC isn't used yet.\\
+NOTE: lots more model was produced and analysed but due to space constraint was not included in the report. The model1 correspond to a naive attempt where $mpg =\beta_0 \frac{\beta_1}{cylinder}+\frac{\beta_2}{displacement}+\frac{\beta_3}{horsepower}+...$ while Ridge regression was not included due to the fact that it produce very small $k$ values suggesting a lot of the parameters should be zero.
 \section{Influential Values (Outliers)}
-By checking the Cook's distance the outlier will be showns and subsequently remove. Using the R-code from the Diagnostics R-code section the two model shows that the value:
+By checking the Cook's distance the outlier will be shown and subsequently remove. Using the R-code from the Diagnostics R-code section the two model shows that the value:
 \begin{lstlisting}
 29, 183, 333, 375 
 \end{lstlisting}
-Both of the model agress which observation should be remove.
-Clearly these model affect the paramters so much that these values should be omitted.\\
+Both of the models agree which observation should be removed.
+Clearly these model affect the parameters so much that these values should be omitted.\\
 After applying the correction to collinearity there seems to be an extra outlier namely 393 which correspond to the 2018 car. Therefore remove that data too.
 \section{Variables Selection for Models}
-Using AIC(Akaike information criterion) the model can be reduce down including all of it's interactions. Unfortunately due to the solution of solving the multicollineaity, it has seem to made it so the AIC can't perform the variable reduction if interaction is included. Therefore these model will not include interaction.\\
-When AIC is perform on both of these model without interaction the model shows that acceleration is not needed. Therefore the final coefficient for the model is:
+Using AIC(Akaike information criterion) the model can be reduced down including all of its interactions. Unfortunately, due to the solution of solving the multicollinearity, it has seemed to make it so the AIC can't perform the variable reduction if the interaction is included. Therefore these model will not include interaction.\\
+When AIC is performed on both of these models without interaction the model shows that acceleration is not needed. Therefore the final coefficient for the model is:
 \begin{lstlisting}
 #Logarithmic model
 
@@ -329,25 +329,26 @@ The AIC for the logarithmic model is $-1276.9$ while reciprocal is $-3609.66$. W
 
 
 \section{Interpretation of Model}
-The model that is going to be use is the exponential model in the form of:
+The model that is going to be used is the exponential model in the form of:
 $$
 mpg = e^{0.08052*\frac{cylinder+weight}{horsepower + displacement}}*e^{0.02581*year}*e^{0.0942*origin}
 $$
-The intuition behind this model is that the increase in horsepower and displacement decrease the mpg exponentially while keeping the other variables constant. The year also factor into this model in a intuitive way, the newer the car the higher the mpg; which is a reasonable trend. Similary for the origin, since Japan is numerical equivalent to 3 then under our mdel japanese car would have the higher mpg while American car would have the lower mpg.
+The intuition behind this model is that the increase in horsepower and displacement decrease the mpg exponentially while keeping the other variables constant. The year also factor into this model in an intuitive way, the newer the car the higher the mpg; which is a reasonable trend. Similarly for the origin, since Japan is numerical equivalent to 3 then under our model Japanese car would have the higher mpg while American car would have the lower mpg.
 \section{Predicting Values}
-We are given Japanese manufactured (in 2000) car, which has weight 2734 lbs, engine displace- ment 81 ins3, horsepower 101 hp, 4 cylinders, and acceleration (0–60) is 12.6 seconds. The prediction is:
+We are given Japanese manufactured (in 2000) car, which has weight 2734 lbs, engine displaces- meant 81 ins3, horsepower 101 hp, 4 cylinders, and acceleration (0–60) is 12.6 seconds. The prediction is:
 \begin{lstlisting}
 # fit      lwr      upr
 # 1 4.187991 4.074648 4.301334
 \end{lstlisting}
 Therefore the mpg for this car would be $e^{4.074}=58.8\geq mpg\geq 73.8 = e^{4.30134}$ with the fitted value landing round about 65.89 mpg.
 \section{Summary and Reflection}
-There was a few problems such as fitting the model before solving the multicollinearity problem to check the assumption then revisiting to re-check the model assumptions. The second problem is that I should have used $\frac{1}{cylinder+weight+horspower+displacement}$ as the new prime variable since this would make a better explaination to why the mpg decrease and those variable increase. For the prediction section, unfortunately the reason why the reciprocal modle perform so well, in the sense of having small residual, is because it produce a large range of confidence interval for instance if the reciprocal model was use th predict the value above it would yield:
+There were a few problems such as fitting the model before solving the multicollinearity problem to check the assumption then revisiting to re-check the model assumptions. The second problem is that I should have used $\frac{1}{cylinder+weight+horspower+displacement}$ as the new prime variable since this would make a better explanation of why the mpg decrease and those variable increase. For the prediction section, unfortunately, the reason why the reciprocal model performs so well, in the sense of having small residual, is because it produces a large range of confidence interval for instance if the reciprocal model was used th predict the value above it would yield:
 \begin{lstlisting}
 # fit          lwr         upr
 # 1 -0.002286896 -0.008114051 0.003540259
 \end{lstlisting}
-Which implies that our mpg is between : $282.27 \geq mpg$ which is very large and not right. Which means this model is not good for prediction.
+Which implies that our mpg is between $282.27 \geq mpg$ which is very large and not right. Which means this model is not good for prediction.\\
+\textbf{The r-code for this can be found on my github under `Rcode.r`}
 \newpage
 \section{R-Code}
 \subsection{Cleaning data}
@@ -356,21 +357,21 @@ Which implies that our mpg is between : $282.27 \geq mpg$ which is very large an
  header = T)
 > View(dat)
 > summary(dat)
-mpg 		cylinders	displacement	 horsepower
-Min.   : 9.0	Min.   :3.000	Min.   : 68.0 	Min.   : 46.0
-1st Qu.:17.0	1st Qu.:4.000	1st Qu.:105.0	1st Qu.: 75.0
-Median :23.0	Median:4.000	Median :151.0	Median : 94.0
-Mean   :23.5	Mean   :5.468	Mean   :194.1	Mean   :104.5
-3rd Qu.:29.0	3rd Qu.:8.000	3rd Qu.:267.0	3rd Qu.:125.0
-Max.   :46.6	Max.   :8.000	Max.   :455.0	Max.   :230.0
+mpg         cylinders    displacement     horsepower
+Min.   : 9.0    Min.   :3.000    Min.   : 68.0     Min.   : 46.0
+1st Qu.:17.0    1st Qu.:4.000    1st Qu.:105.0    1st Qu.: 75.0
+Median :23.0    Median:4.000    Median :151.0    Median : 94.0
+Mean   :23.5    Mean   :5.468    Mean   :194.1    Mean   :104.5
+3rd Qu.:29.0    3rd Qu.:8.000    3rd Qu.:267.0    3rd Qu.:125.0
+Max.   :46.6    Max.   :8.000    Max.   :455.0    Max.   :230.0
 
-weight		acceleration	year		origin
-Min.   :1613	Min.   : 8.00	Min.   :18.00	Min.   :1.000
-1st Qu.:2226	1st Qu.:13.70	1st Qu.:73.00	1st Qu.:1.000
-Median :2807	Median :15.50	Median :76.00	Median :1.000
-Mean   :2978	Mean   :15.52	Mean   :75.83	Mean   :1.578
-3rd Qu.:3613	3rd Qu.:17.00	3rd Qu.:79.00	3rd Qu.:2.000
-Max.   :5140	Max.   :24.80	Max.   :82.00	Max.   :3.000
+weight        acceleration    year        origin
+Min.   :1613    Min.   : 8.00    Min.   :18.00    Min.   :1.000
+1st Qu.:2226    1st Qu.:13.70    1st Qu.:73.00    1st Qu.:1.000
+Median :2807    Median :15.50    Median :76.00    Median :1.000
+Mean   :2978    Mean   :15.52    Mean   :75.83    Mean   :1.578
+3rd Qu.:3613    3rd Qu.:17.00    3rd Qu.:79.00    3rd Qu.:2.000
+Max.   :5140    Max.   :24.80    Max.   :82.00    Max.   :3.000
 
 name
 amc matador       :  5
@@ -395,8 +396,8 @@ dat = read.table("http://www1.maths.leeds.ac.uk/~charles/math3714/Auto.csv", hea
 #adding a extra entry called make which stands for the maker of the car.
 dat$make = dat$name
 
-#changing the string into the first word of the sring.
-#Then attaching the first word of the string to make table.
+#changing the string into the first word of the string.
+#Then attaching the first word of the string to make the table.
 for(string in dat$make){
   substring = strsplit(string, " ")[[1]]
   maker = substring[1]
@@ -414,20 +415,20 @@ for(string in dat$name){
 \textbf{Duplication of Car Makers}
 \begin{lstlisting}
 >table(dat$make)
-amc	audi	bmw	buick	cadillac	capri	chevroelt
-27	7	2 	17	2 		1 	1 
-chevrolet	chevy	chrysler	datsun 
-43		3 	6 		23 
-dodge	fiat	ford	hi	honda	maxda	mazda
-28 	8	48 	1	13	2	10	
-mercedes mercedes-benz	mercury	nissan 
-1	 2		11	1 
-oldsmobile	opel 	peugeot	plymouth	pontiac	renault
-10		4	8	31		16	3
-saab	subaru	toyota	toyouta	triumph
-4	4	25	1	1 
-vokswagen	volkswagen 	volvo	vw 
-1		15		6	7 
+amc    audi    bmw    buick    cadillac    capri    chevroelt
+27    7    2     17    2         1     1 
+chevrolet    chevy    chrysler    datsun 
+43        3     6         23 
+dodge    fiat    ford    hi    honda    maxda    mazda
+28     8    48     1    13    2    10    
+mercedes mercedes-benz    mercury    nissan 
+1     2        11    1 
+oldsmobile    opel     peugeot    plymouth    pontiac    renault
+10        4    8    31        16    3
+saab    subaru    toyota    toyouta    triumph
+4    4    25    1    1 
+vokswagen    volkswagen     volvo    vw 
+1        15        6    7 
 \end{lstlisting}
 \begin{lstlisting}
 >dat$make = factor(dat$make)
