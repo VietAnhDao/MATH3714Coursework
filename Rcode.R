@@ -373,6 +373,8 @@ check_assumption1("log_reciprocal_cor",log_recip_model,dat2)
 
 #Checking which model has the best residual
 res_bench(dat)
+# base square root     log reciprocal   model1 log reciprocal Ridge
+# [1,] 8129.847    83.09975 5.60372 0.03921142 3328.877       14.86362 33.53
 
 #Checking-for-Outliers-----------------------------------------------------------------------------------------
 #Cook's distance
@@ -393,12 +395,123 @@ check_cook("reciprocal_cor",rec_y,dat)
 summary(Log_model)
 summary(rec_y)
 
-#FINAL-TWO-MODEL------------------------------------------------------------------------------------------------
-dat3=dat2[-6]
-final_log = lm(log(mpg) ~ .^2, data = dat3)
-final_rec = lm(1/mpg ~ .^2, data = dat2[-6])
-
-step(final_log, direction="backward")
-step(final_rec,direction = "backward")
+Log_model = log_model(dat[-9])
+step(Log_model,direction = "both")
 
 #AIC------------------------------------------------------------------------------------------------------------
+#FINAL-TWO-MODEL------------------------------------------------------------------------------------------------
+dat3=dat2[-6]
+final_log = lm(log(mpg) ~ ., data = dat3)
+final_rec = lm(1/mpg ~ ., data = dat3)
+
+step(final_log, direction="both")
+step(final_rec,direction = "both")
+# > step(final_log, direction="forward")
+# Start:  AIC=-1321.51
+# log(mpg) ~ (prime + acceleration + year + origin)^2
+# 
+# 
+# Call:
+#   lm(formula = log(mpg) ~ (prime + acceleration + year + origin)^2, 
+#      data = dat3)
+# 
+# Coefficients:
+#   (Intercept)                prime         acceleration                 year               origin  
+# 0.5409502            0.3444590           -0.1970143            0.0111617            0.2646668  
+# prime:acceleration           prime:year         prime:origin    acceleration:year  acceleration:origin  
+# -0.0030720           -0.0014064           -0.0739016            0.0021538            0.0399048  
+# year:origin  
+# 0.0008263  
+
+# > step(final_rec, direction="forward")
+# Start:  AIC=-3660.86
+# 1/mpg ~ (prime + acceleration + year + origin)^2
+# 
+# 
+# Call:
+#   lm(formula = 1/mpg ~ (prime + acceleration + year + origin)^2, 
+#      data = dat3)
+# 
+# Coefficients:
+#   (Intercept)                prime         acceleration                 year               origin  
+# 2.828e-01           -2.242e-02            7.727e-03           -1.930e-03           -3.296e-02  
+# prime:acceleration           prime:year         prime:origin    acceleration:year  acceleration:origin  
+# 1.324e-04            1.480e-04            3.557e-03           -8.655e-05           -1.526e-03  
+# year:origin  
+# 1.473e-04
+final_log = lm(log(mpg)~., data = dat3)
+final_rec = lm(1/mpg~., data = dat3)
+step(final_log, direction="both")
+final_rec = step(final_rec,direction = "both")
+# > step(final_log, direction="both")
+# Start:  AIC=-1275.53
+# log(mpg) ~ prime + acceleration + year + origin
+# 
+# Df Sum of Sq    RSS     AIC
+# - acceleration  1    0.0240 14.945 -1276.9
+# <none>                      14.921 -1275.5
+# - origin        1    1.2778 16.198 -1245.2
+# - year          1    3.9017 18.822 -1186.2
+# - prime         1    3.9600 18.881 -1185.0
+# 
+# Step:  AIC=-1276.9
+# log(mpg) ~ prime + year + origin
+# 
+# Df Sum of Sq    RSS     AIC
+# <none>                      14.945 -1276.9
+# + acceleration  1    0.0240 14.921 -1275.5
+# - origin        1    1.5229 16.467 -1240.8
+# - year          1    4.0292 18.974 -1185.1
+# - prime         1    6.8062 21.751 -1131.4
+# 
+# Call:
+#   lm(formula = log(mpg) ~ prime + year + origin, data = dat3)
+# 
+# Coefficients:
+#   (Intercept)        prime         year       origin  
+# 0.11322      0.08052      0.02581      0.09420  
+
+# > step(final_rec,direction = "both")
+# Start:  AIC=-3607.76
+# 1/mpg ~ prime + acceleration + year + origin
+# 
+# Df Sum of Sq      RSS     AIC
+# - acceleration  1 0.0000098 0.039501 -3609.7
+# <none>                      0.039491 -3607.8
+# - origin        1 0.0022469 0.041738 -3588.0
+# - year          1 0.0077182 0.047209 -3539.6
+# - prime         1 0.0096978 0.049189 -3523.5
+# 
+# Step:  AIC=-3609.66
+# 1/mpg ~ prime + year + origin
+# 
+# Df Sum of Sq      RSS     AIC
+# <none>                      0.039501 -3609.7
+# + acceleration  1 0.0000098 0.039491 -3607.8
+# - origin        1 0.0025693 0.042070 -3586.9
+# - year          1 0.0078913 0.047392 -3540.1
+# - prime         1 0.0178094 0.057310 -3465.4
+# 
+# Call:
+#   lm(formula = 1/mpg ~ prime + year + origin, data = dat3)
+# 
+# Coefficients:
+#   (Intercept)        prime         year       origin  
+# 0.185501    -0.004119    -0.001142    -0.003869  
+
+#Predicting the new value
+prime = (dat$cylinders+dat$weight)/(dat$horsepower+dat$displacement)
+dat2=as.data.frame(cbind(dat$mpg,prime,dat$acceleration,dat$year,dat$origin,dat$make))
+colnames(dat2)=c("mpg","prime","acceleration","year","origin","make")
+dat3=dat2[-6]
+final_log = lm(log(mpg) ~ ., data = dat3)
+final_rec = lm(1/mpg ~ ., data = dat3)
+final_rec = step(final_rec,direction = "both")
+summary(final_rec)
+new = as.data.frame(cbind(15.043956,100,3))
+colnames(new)=c("prime","year","origin")
+predict.lm(final_rec,newdata=new,interval="confidence",level=0.95)
+# fit          lwr         upr
+# 1 -0.002286896 -0.008114051 0.003540259
+# fit      lwr      upr
+# 1 4.187991 4.074648 4.301334

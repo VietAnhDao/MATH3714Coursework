@@ -329,21 +329,25 @@ The AIC for the logarithmic model is $-1276.9$ while reciprocal is $-3609.66$. W
 
 
 \section{Interpretation of Model}
-The better model to select is the reciprocal model. The reason is that the logarithmic model is not very well suited for this is because mpg is always greater than zero but this is against our intuition since if horsepower tends to infinity then the mpg should also go very large, but the log model state that this model tends to a constant if all other variable is kept at the same value. Therefore the better model is to use the reciprocal model, which is in the form of:
+The model that is going to be use is the exponential model in the form of:
 $$
-\frac{1}{mpg}=0.185501-0.004119*\frac{cylinder+weight}{horsepower + displacement}-0.001142*year-0.003869*origin  
+mpg = e^{0.08052*\frac{cylinder+weight}{horsepower + displacement}}*e^{0.02581*year}*e^{0.0942*origin}
 $$
-$$
-\Leftrightarrow mpg = \frac{1}{0.185501-0.004119*\frac{cylinder+weight}{horsepower + displacement}-0.001142*year-0.003869*origin}
-$$
-This model, somewhat, conforms to our intuition. As the horsepower and displacement goes up then the mpg goes down. As the year goes up then so does the mpg (i.e. the newer the car the higher the mpg of that car).
-
-
+The intuition behind this model is that the increase in horsepower and displacement decrease the mpg exponentially while keeping the other variables constant. The year also factor into this model in a intuitive way, the newer the car the higher the mpg; which is a reasonable trend. Similary for the origin, since Japan is numerical equivalent to 3 then under our mdel japanese car would have the higher mpg while American car would have the lower mpg.
 \section{Predicting Values}
-We are given Japanese manufactured (in 2000) car, which has weight 2734 lbs, engine displace- ment 81 ins3, horsepower 101 hp, 4 cylinders, and acceleration (0–60) is 12.6 seconds
-
+We are given Japanese manufactured (in 2000) car, which has weight 2734 lbs, engine displace- ment 81 ins3, horsepower 101 hp, 4 cylinders, and acceleration (0–60) is 12.6 seconds. The prediction is:
+\begin{lstlisting}
+# fit      lwr      upr
+# 1 4.187991 4.074648 4.301334
+\end{lstlisting}
+Therefore the mpg for this car would be $e^{4.074}=58.8\geq mpg\geq 73.8 = e^{4.30134}$ with the fitted value landing round about 65.89 mpg.
 \section{Summary and Reflection}
-There was a few problems such as fitting the model before solving the multicollinearity problem to check the assumption then revisiting to re-check the model assumptions. The second problem is that I should have used $\frac{1}{cylinder+weight+horspower+displacement}$ as the new prime variable since this would make a better explaination to why the mpg decrease and those variable increase.
+There was a few problems such as fitting the model before solving the multicollinearity problem to check the assumption then revisiting to re-check the model assumptions. The second problem is that I should have used $\frac{1}{cylinder+weight+horspower+displacement}$ as the new prime variable since this would make a better explaination to why the mpg decrease and those variable increase. For the prediction section, unfortunately the reason why the reciprocal modle perform so well, in the sense of having small residual, is because it produce a large range of confidence interval for instance if the reciprocal model was use th predict the value above it would yield:
+\begin{lstlisting}
+# fit          lwr         upr
+# 1 -0.002286896 -0.008114051 0.003540259
+\end{lstlisting}
+Which implies that our mpg is between : $282.27 \geq mpg$ which is very large and not right. Which means this model is not good for prediction.
 \newpage
 \section{R-Code}
 \subsection{Cleaning data}
@@ -585,5 +589,25 @@ final_log = lm(log(mpg)~., data = dat3)
 final_rec = lm(1/mpg~., data = dat3)
 step(final_log, direction="both")
 step(final_rec,direction = "both")
+\end{lstlisting}
+\subsection{Prediction}
+\begin{lstlisting}
+#Predicting the new value
+prime = (dat$cylinders+dat$weight)/(dat$horsepower+dat$displacement)
+dat2=as.data.frame(cbind(dat$mpg,prime,dat$acceleration,dat$year,dat$origin,dat$make))
+colnames(dat2)=c("mpg","prime","acceleration","year","origin","make")
+dat3=dat2[-6]
+final_log = lm(log(mpg) ~ ., data = dat3)
+final_rec = lm(1/mpg ~ ., data = dat3)
+final_rec = step(final_rec,direction = "both")
+summary(final_rec)
+new = as.data.frame(cbind(15.043956,100,3))
+colnames(new)=c("prime","year","origin")
+predict.lm(final_rec,newdata=new,interval="confidence",level=0.95)
+predict.lm(final_log,newdata=new, interval="confidence",level=0.95)
+# fit          lwr         upr
+# 1 -0.002286896 -0.008114051 0.003540259
+# fit      lwr      upr
+# 1 4.187991 4.074648 4.301334
 \end{lstlisting}
 \end{document}

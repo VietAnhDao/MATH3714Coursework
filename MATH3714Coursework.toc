@@ -47,3 +47,5 @@
 \contentsline {subsection}{\numberline {8.4}Removing Outliers}{16}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.5}AIC}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.6}Prediction}{16}

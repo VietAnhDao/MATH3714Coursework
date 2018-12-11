@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.10)  10 DEC 2018 23:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.10)  11 DEC 2018 09:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -812,44 +812,29 @@ Overfull \hbox (54.2454pt too wide) in paragraph at lines 295--296
 [][][][][][][][][][][] 
  []
 
-[9 <./5_QQplot.png> <./5_Variance.png>]
-Overfull \hbox (15.73578pt too wide) detected at line 335
-[] \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 185501 \OMS/cm
-sy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 00
-4119 \OMS/cmsy/m/n/10.95 ^^C [] ^^@ \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\O
-T1/cmr/m/n/10.95 001142 \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 year \OMS/c
-msy/m/n/10.95 ^^@ \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0
-03869 \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 origin
- []
-
-[10]
-Overfull \hbox (24.91345pt too wide) detected at line 338
-\OMS/cmsy/m/n/10.95 , \OML/cmm/m/it/10.95 mpg \OT1/cmr/m/n/10.95 = []
- []
-
-[11]
-Overfull \hbox (73.14537pt too wide) in paragraph at lines 351--352
+[9 <./5_QQplot.png> <./5_Variance.png>] [10] [11]
+Overfull \hbox (73.14537pt too wide) in paragraph at lines 355--356
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (274.74498pt too wide) in paragraph at lines 387--388
+Overfull \hbox (274.74498pt too wide) in paragraph at lines 391--392
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (35.34544pt too wide) in paragraph at lines 391--392
+Overfull \hbox (35.34544pt too wide) in paragraph at lines 395--396
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][] 
  []
 
 [12]
-Overfull \hbox (60.5454pt too wide) in paragraph at lines 448--449
+Overfull \hbox (60.5454pt too wide) in paragraph at lines 452--453
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -857,7 +842,7 @@ Overfull \hbox (60.5454pt too wide) in paragraph at lines 448--449
  []
 
 [13]
-Overfull \hbox (3.8455pt too wide) in paragraph at lines 461--462
+Overfull \hbox (3.8455pt too wide) in paragraph at lines 465--466
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -865,7 +850,7 @@ Overfull \hbox (3.8455pt too wide) in paragraph at lines 461--462
  []
 
 
-Overfull \hbox (16.44548pt too wide) in paragraph at lines 463--464
+Overfull \hbox (16.44548pt too wide) in paragraph at lines 467--468
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -874,64 +859,64 @@ Overfull \hbox (16.44548pt too wide) in paragraph at lines 463--464
  []
 
 
-Overfull \hbox (10.1455pt too wide) in paragraph at lines 465--466
+Overfull \hbox (10.1455pt too wide) in paragraph at lines 469--470
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.14537pt too wide) in paragraph at lines 466--467
+Overfull \hbox (73.14537pt too wide) in paragraph at lines 470--471
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (66.84538pt too wide) in paragraph at lines 488--489
+Overfull \hbox (66.84538pt too wide) in paragraph at lines 492--493
 [][][][][][][][][][][] 
  []
 
 [14]
-Overfull \hbox (47.94542pt too wide) in paragraph at lines 519--520
+Overfull \hbox (47.94542pt too wide) in paragraph at lines 523--524
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][] 
  []
 
 
-Overfull \hbox (129.84526pt too wide) in paragraph at lines 530--531
+Overfull \hbox (129.84526pt too wide) in paragraph at lines 534--535
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (205.44511pt too wide) in paragraph at lines 540--541
+Overfull \hbox (205.44511pt too wide) in paragraph at lines 544--545
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (249.54503pt too wide) in paragraph at lines 541--542
+Overfull \hbox (249.54503pt too wide) in paragraph at lines 545--546
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (218.04509pt too wide) in paragraph at lines 542--543
+Overfull \hbox (218.04509pt too wide) in paragraph at lines 546--547
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (29.04546pt too wide) in paragraph at lines 546--548
+Overfull \hbox (29.04546pt too wide) in paragraph at lines 550--552
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [15]
-Overfull \hbox (3.8455pt too wide) in paragraph at lines 567--568
+Overfull \hbox (3.8455pt too wide) in paragraph at lines 571--572
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (60.5454pt too wide) in paragraph at lines 568--569
+Overfull \hbox (60.5454pt too wide) in paragraph at lines 572--573
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -940,36 +925,60 @@ Overfull \hbox (60.5454pt too wide) in paragraph at lines 568--569
 ][][][][][][] 
  []
 
-[16] (./MATH3714Coursework.aux)
+
+Overfull \hbox (10.1455pt too wide) in paragraph at lines 596--597
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (123.54527pt too wide) in paragraph at lines 597--598
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (16.44548pt too wide) in paragraph at lines 598--599
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[16]
+Overfull \hbox (3.8455pt too wide) in paragraph at lines 607--608
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][] 
+ []
+
+[17] (./MATH3714Coursework.aux)
 Package logreq Info: Writing requests to 'MATH3714Coursework.run.xml'.
 \openout1 = `MATH3714Coursework.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14178 strings out of 492649
- 227673 string characters out of 6129621
+ 14181 strings out of 492649
+ 227708 string characters out of 6129621
  718607 words of memory out of 5000000
- 17885 multiletter control sequences out of 15000+600000
+ 17888 multiletter control sequences out of 15000+600000
  11700 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,12n,43p,881b,1731s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on MATH3714Coursework.pdf (16 pages, 1440759 bytes).
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on MATH3714Coursework.pdf (17 pages, 1454979 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
